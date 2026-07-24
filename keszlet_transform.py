@@ -152,12 +152,14 @@ def write(grid, out_path):
             c1.fill = PatternFill('solid', fgColor=mod_fill[code[0]])
         c2 = ws[f'{col}2']; c2.value = dname; c2.font = base
         c2.alignment = Alignment(horizontal='center')
-    ws['B3'] = '=SUM(B4:B600)'; ws['B3'].font = hdr
+    max_idx = max(MASTER)
+    ws['B3'] = f'=SUM(B4:B{max_idx + 3})'; ws['B3'].font = hdr
 
     last_col = LAYOUT[-1][0]
-    for idx in range(1, 598):
+    for idx in range(1, max_idx + 1):
         r = idx + 3
-        ws.cell(r, 1, MASTER[idx]['name'] or f'(idx {idx})').font = base
+        m = MASTER.get(idx)
+        ws.cell(r, 1, (m and m['name']) or f'(idx {idx})').font = base
         ws.cell(r, 2, f'=COUNTIF(C{r}:{last_col}{r},"<0")').font = base
         for col, code, _ in LAYOUT:
             v = grid.get((idx, code))
