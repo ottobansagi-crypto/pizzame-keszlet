@@ -9,41 +9,47 @@
   @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap');
 
   :root {
-    --bg: #f5f4f0;
+    --bg: #fbf3e6;
     --surface: #ffffff;
-    --surface2: #eeede8;
-    --border: rgba(0,0,0,0.08);
-    --border2: rgba(0,0,0,0.14);
-    --text: #1a1916;
-    --text2: #6b6a65;
-    --text3: #9e9d98;
+    --surface2: #f7ead4;
+    --border: rgba(120,53,15,0.12);
+    --border2: rgba(120,53,15,0.22);
+    --text: #2b1a12;
+    --text2: #8a705a;
+    --text3: #b09b85;
     --red: #c0392b;
     --red-bg: #fdf0ee;
     --green: #2d6a4f;
     --green-bg: #edf7f2;
     --amber: #92400e;
     --amber-bg: #fef3c7;
-    --accent: #1a1916;
-    --radius: 10px;
-    --radius-lg: 14px;
+    --accent: #d1442f;
+    --accent2: #e8703f;
+    --on-accent: #fff8f0;
+    --radius: 12px;
+    --radius-lg: 16px;
+    --shadow: 0 1px 2px rgba(120,53,15,0.06), 0 10px 24px rgba(120,53,15,0.06);
   }
   @media (prefers-color-scheme: dark) {
     :root {
-      --bg: #171613;
-      --surface: #211f1c;
-      --surface2: #2a2824;
+      --bg: #1c140f;
+      --surface: #251b15;
+      --surface2: #2f2319;
       --border: rgba(255,255,255,0.08);
       --border2: rgba(255,255,255,0.16);
-      --text: #f0efe9;
-      --text2: #a8a69f;
-      --text3: #75736c;
+      --text: #f5ead9;
+      --text2: #c7ac95;
+      --text3: #8d7461;
       --red: #e57368;
       --red-bg: #3a211d;
       --green: #6fbf9a;
       --green-bg: #1c2e26;
       --amber: #e0a94a;
       --amber-bg: #3a2c10;
-      --accent: #f0efe9;
+      --accent: #ff6b4d;
+      --accent2: #ffa25c;
+      --on-accent: #241108;
+      --shadow: 0 1px 2px rgba(0,0,0,0.25), 0 10px 24px rgba(0,0,0,0.25);
     }
   }
 
@@ -59,8 +65,8 @@
   }
 
   .header {
-    background: var(--text);
-    color: var(--bg);
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    color: var(--on-accent);
     padding: 18px 28px;
     display: flex;
     align-items: baseline;
@@ -68,9 +74,10 @@
     position: sticky;
     top: 0;
     z-index: 100;
+    box-shadow: var(--shadow);
   }
   .header h1 { font-size: 16px; font-weight: 600; letter-spacing: -0.3px; }
-  .header-meta { font-size: 12px; opacity: 0.55; font-family: 'DM Mono', monospace; }
+  .header-meta { font-size: 12px; opacity: 0.75; font-family: 'DM Mono', monospace; }
 
   .main { max-width: 780px; margin: 0 auto; padding: 28px 20px 60px; }
 
@@ -83,6 +90,7 @@
     border-radius: var(--radius-lg);
     padding: 20px;
     margin-bottom: 18px;
+    box-shadow: var(--shadow);
   }
 
   .drop-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
@@ -97,7 +105,7 @@
     transition: all 0.15s;
     background: var(--surface2);
   }
-  .dropzone:hover, .dropzone.drag { border-color: var(--text); background: var(--surface); }
+  .dropzone:hover, .dropzone.drag { border-color: var(--accent); background: var(--surface); }
   .dropzone.filled { border-style: solid; border-color: var(--green); background: var(--green-bg); }
   .dz-label { font-weight: 600; font-size: 13px; margin-bottom: 4px; }
   .dz-sub { font-size: 12px; color: var(--text2); }
@@ -108,12 +116,13 @@
     display: inline-flex; align-items: center; gap: 8px;
     padding: 11px 20px; font-size: 13px; font-weight: 600;
     border: none; border-radius: var(--radius);
-    background: var(--text); color: var(--bg);
+    background: linear-gradient(135deg, var(--accent), var(--accent2)); color: var(--on-accent);
     cursor: pointer; font-family: 'DM Sans', sans-serif;
-    transition: opacity 0.15s;
+    transition: opacity 0.15s, transform 0.15s;
+    box-shadow: 0 4px 12px rgba(209,68,47,0.25);
   }
-  .btn:disabled { opacity: 0.35; cursor: not-allowed; }
-  .btn:not(:disabled):hover { opacity: 0.85; }
+  .btn:disabled { opacity: 0.35; cursor: not-allowed; box-shadow: none; }
+  .btn:not(:disabled):hover { opacity: 0.9; transform: translateY(-1px); }
 
   .banner {
     border-radius: var(--radius);
@@ -144,7 +153,7 @@
 <body>
 
 <div class="header">
-  <h1>Készlet feltöltés generátor</h1>
+  <h1>🍕 Készlet feltöltés generátor</h1>
   <span class="header-meta">bemenet a böngésződben marad, semmi nem kerül szerverre</span>
   <a href="szerkeszto.html" style="margin-left:auto;color:inherit;opacity:0.7;font-size:12.5px;text-decoration:none">Termékek szerkesztése &rarr;</a>
 </div>

@@ -8,35 +8,39 @@
   @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap');
 
   :root {
-    --bg: #f5f4f0; --surface: #ffffff; --surface2: #eeede8;
-    --border: rgba(0,0,0,0.08); --border2: rgba(0,0,0,0.14);
-    --text: #1a1916; --text2: #6b6a65; --text3: #9e9d98;
+    --bg: #fbf3e6; --surface: #ffffff; --surface2: #f7ead4;
+    --border: rgba(120,53,15,0.12); --border2: rgba(120,53,15,0.22);
+    --text: #2b1a12; --text2: #8a705a; --text3: #b09b85;
     --red: #c0392b; --red-bg: #fdf0ee;
     --green: #2d6a4f; --green-bg: #edf7f2;
     --amber: #92400e; --amber-bg: #fef3c7;
-    --radius: 10px; --radius-lg: 14px;
+    --accent: #d1442f; --accent2: #e8703f; --on-accent: #fff8f0;
+    --radius: 12px; --radius-lg: 16px;
+    --shadow: 0 1px 2px rgba(120,53,15,0.06), 0 10px 24px rgba(120,53,15,0.06);
   }
   @media (prefers-color-scheme: dark) {
     :root {
-      --bg: #171613; --surface: #211f1c; --surface2: #2a2824;
+      --bg: #1c140f; --surface: #251b15; --surface2: #2f2319;
       --border: rgba(255,255,255,0.08); --border2: rgba(255,255,255,0.16);
-      --text: #f0efe9; --text2: #a8a69f; --text3: #75736c;
+      --text: #f5ead9; --text2: #c7ac95; --text3: #8d7461;
       --red: #e57368; --red-bg: #3a211d;
       --green: #6fbf9a; --green-bg: #1c2e26;
       --amber: #e0a94a; --amber-bg: #3a2c10;
+      --accent: #ff6b4d; --accent2: #ffa25c; --on-accent: #241108;
+      --shadow: 0 1px 2px rgba(0,0,0,0.25), 0 10px 24px rgba(0,0,0,0.25);
     }
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); font-size: 14px; line-height: 1.5; }
 
-  .header { background: var(--text); color: var(--bg); padding: 18px 28px; display: flex; align-items: baseline; gap: 14px; justify-content: space-between; position: sticky; top: 0; z-index: 100; }
+  .header { background: linear-gradient(135deg, var(--accent), var(--accent2)); color: var(--on-accent); padding: 18px 28px; display: flex; align-items: baseline; gap: 14px; justify-content: space-between; position: sticky; top: 0; z-index: 100; box-shadow: var(--shadow); }
   .header h1 { font-size: 16px; font-weight: 600; }
-  .header a { color: inherit; opacity: 0.7; font-size: 12.5px; text-decoration: none; }
+  .header a { color: inherit; opacity: 0.8; font-size: 12.5px; text-decoration: none; }
   .header a:hover { opacity: 1; text-decoration: underline; }
 
   .main { max-width: 900px; margin: 0 auto; padding: 24px 20px 80px; }
 
-  .card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 20px; margin-bottom: 16px; }
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 20px; margin-bottom: 16px; box-shadow: var(--shadow); }
   .step { font-size: 11px; text-transform: uppercase; letter-spacing: 0.4px; color: var(--text3); font-weight: 600; margin-bottom: 10px; }
 
   label.field { display: block; font-size: 12.5px; color: var(--text2); margin-bottom: 6px; }
@@ -44,16 +48,16 @@
     width: 100%; padding: 9px 12px; border: 1px solid var(--border2); border-radius: var(--radius);
     background: var(--surface2); color: var(--text); font-family: 'DM Mono', monospace; font-size: 13px; outline: none;
   }
-  input:focus { border-color: var(--text); }
+  input:focus { border-color: var(--accent); }
   .row-inline { display: flex; gap: 10px; align-items: end; flex-wrap: wrap; }
   .row-inline > div { flex: 1; min-width: 200px; }
   .chk { display: flex; align-items: center; gap: 5px; font-size: 12px; color: var(--text2); }
 
-  .btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 18px; font-size: 13px; font-weight: 600; border: none; border-radius: var(--radius); background: var(--text); color: var(--bg); cursor: pointer; }
-  .btn:disabled { opacity: 0.35; cursor: not-allowed; }
-  .btn:not(:disabled):hover { opacity: 0.85; }
-  .btn.secondary { background: var(--surface2); color: var(--text); border: 1px solid var(--border2); }
-  .btn.danger { background: var(--red); color: #fff; }
+  .btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 18px; font-size: 13px; font-weight: 600; border: none; border-radius: var(--radius); background: linear-gradient(135deg, var(--accent), var(--accent2)); color: var(--on-accent); cursor: pointer; box-shadow: 0 4px 12px rgba(209,68,47,0.25); transition: opacity 0.15s, transform 0.15s; }
+  .btn:disabled { opacity: 0.35; cursor: not-allowed; box-shadow: none; }
+  .btn:not(:disabled):hover { opacity: 0.9; transform: translateY(-1px); }
+  .btn.secondary { background: var(--surface2); color: var(--text); border: 1px solid var(--border2); box-shadow: none; }
+  .btn.danger { background: var(--red); color: #fff; box-shadow: none; }
 
   .banner { border-radius: var(--radius); padding: 12px 14px; font-size: 12.5px; margin-top: 12px; display: none; }
   .banner.show { display: block; }
@@ -91,7 +95,7 @@
 <body>
 
 <div class="header">
-  <h1>Termékek szerkesztése</h1>
+  <h1>🍕 Termékek szerkesztése</h1>
   <a href="index.html">&larr; generátor</a>
 </div>
 
