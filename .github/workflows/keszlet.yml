@@ -1,0 +1,45 @@
+name: Készlet feltöltés generálás
+
+# Lefut, amikor új fájl kerül a bemenet/ mappába (push),
+# és kézzel is indítható az Actions fülről (Run workflow).
+on:
+  push:
+    paths:
+      - 'bemenet/**.xlsx'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Repo letöltése
+        uses: actions/checkout@v4
+
+      - name: Python beállítása
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Függőségek telepítése
+        run: pip install -r requirements.txt
+
+      - name: Transzformáció futtatása
+        run: python keszlet_transform.py
+
+      - name: Eredmény letölthető artifactként
+        uses: actions/upload-artifact@v4
+        with:
+          name: keszlet-feltoltes
+          path: kimenet/*.xlsx
+          if-no-files-found: error
+
+      - name: Eredmény visszaírása a repóba (kimenet/)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add kimenet/
+          git diff --staged --quiet || git commit -m "Készlet feltöltés generálva ($(date +%F))"
+          git push

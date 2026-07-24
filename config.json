@@ -1,0 +1,2715 @@
+{
+ "master": {
+  "1": {
+   "name": "P gombóc",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "2": {
+   "name": "P TK gombóc",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "3": {
+   "name": "P 32 gombóc",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "4": {
+   "name": "P 32 TK gombóc",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "5": {
+   "name": "P 22 gombóc",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "6": {
+   "name": "P szósz",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "7": {
+   "name": "Paradicsomszósz- Pelatti",
+   "occ": "V31"
+  },
+  "8": {
+   "name": "P Fűszerkeverék",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "9": {
+   "name": "P Mozzarela",
+   "occ": "V31"
+  },
+  "10": {
+   "name": "Reszelt Mozzarela",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "11": {
+   "name": "Bivaly Mozzarella",
+   "occ": "V31"
+  },
+  "12": {
+   "name": "P Edami",
+   "occ": "V31"
+  },
+  "13": {
+   "name": "P Vodkaszósz",
+   "occ": "V31"
+  },
+  "14": {
+   "name": "P Szupercsípős pepperoni",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "15": {
+   "name": "Csirkemell Sonka",
+   "occ": "V31"
+  },
+  "16": {
+   "name": "Gorgonzola",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "17": {
+   "name": "Sztracsatella",
+   "occ": "V31"
+  },
+  "18": {
+   "name": "Parmezánsajt",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "19": {
+   "name": "Ricotta",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "20": {
+   "name": "Sperlari erdei gyümölcs gumicukor",
+   "occ": "V31"
+  },
+  "21": {
+   "name": "Sperlari narancsos gumicukor",
+   "occ": "V31"
+  },
+  "22": {
+   "name": "Szupercsípős pepperoni",
+   "occ": "V31"
+  },
+  "23": {
+   "name": "Fini tükörtojás gumicukor",
+   "occ": "V31"
+  },
+  "24": {
+   "name": "Amica pizzás snack 125g",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "25": {
+   "name": "Tre Marie sztracsatellás nápolyi 140g",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "26": {
+   "name": "Ventricina szalámi",
+   "occ": "V31"
+  },
+  "27": {
+   "name": "P Pepperoni szalámi",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "28": {
+   "name": "P Spiaria szalámi",
+   "occ": "V31"
+  },
+  "29": {
+   "name": "Szárított paradicsom",
+   "occ": "V31 / Készlet HU"
+  },
+  "30": {
+   "name": "Pácolt Paprika",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "31": {
+   "name": "P Porchetta romana",
+   "occ": "V31"
+  },
+  "32": {
+   "name": "P Sonka Cotto",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "33": {
+   "name": "P Speck",
+   "occ": "V31"
+  },
+  "34": {
+   "name": "P Spinata Calabra",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "35": {
+   "name": "P Pancetta Tartufo",
+   "occ": "V31"
+  },
+  "36": {
+   "name": "P Szalámi Napolitana",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "37": {
+   "name": "P Bolognai ragu",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "38": {
+   "name": "Hátsó csülök",
+   "occ": "V31"
+  },
+  "39": {
+   "name": "Salsicca",
+   "occ": "V31 / Készlet HU"
+  },
+  "40": {
+   "name": "Bacon",
+   "occ": "V31 / Készlet HU"
+  },
+  "41": {
+   "name": "Gyulai kolbász",
+   "occ": "V31 / Készlet HU"
+  },
+  "42": {
+   "name": "P Chilisolaj",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "43": {
+   "name": "P Fokhagymaolaj",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "44": {
+   "name": "",
+   "occ": "V31"
+  },
+  "45": {
+   "name": "P Olívabogyókrém",
+   "occ": "V31"
+  },
+  "46": {
+   "name": "P Bazsalikomos olaj",
+   "occ": "V31"
+  },
+  "47": {
+   "name": "P Fűszeres paprika",
+   "occ": "V31"
+  },
+  "48": {
+   "name": "P Lilahagyma",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "49": {
+   "name": "P Cukkini",
+   "occ": "V31"
+  },
+  "50": {
+   "name": "Panna",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "51": {
+   "name": "Zsemlemorzsa",
+   "occ": "V31"
+  },
+  "52": {
+   "name": "P Zöldség mix",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "53": {
+   "name": "P Olívabogyó",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "54": {
+   "name": "Petrezselyem",
+   "occ": "V31"
+  },
+  "55": {
+   "name": "P Tonhal",
+   "occ": "V31"
+  },
+  "56": {
+   "name": "P szeletelt koktél paradicsom",
+   "occ": "V31"
+  },
+  "57": {
+   "name": "Kis tonhalkonzerv",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "58": {
+   "name": "Szeletelt sonka 500g",
+   "occ": "V31"
+  },
+  "59": {
+   "name": "Csabai kolbász",
+   "occ": "V31 / Készlet SK"
+  },
+  "60": {
+   "name": "Fusili",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "61": {
+   "name": "Penne",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "62": {
+   "name": "Spagetti",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "63": {
+   "name": "Rétesliszt",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "64": {
+   "name": "",
+   "occ": "V31"
+  },
+  "65": {
+   "name": "",
+   "occ": "V31"
+  },
+  "66": {
+   "name": "Articsóka",
+   "occ": "V31 / Készlet SK"
+  },
+  "67": {
+   "name": "Durva tengeri só",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "68": {
+   "name": "PM Tartufata 140g",
+   "occ": "V31 / Készlet HU"
+  },
+  "69": {
+   "name": "Tartufata szósz 1,85 kg",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "70": {
+   "name": "Bolognai darált hús",
+   "occ": "V31"
+  },
+  "71": {
+   "name": "Funghi mix zacskó 1,7 kg",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "72": {
+   "name": "Acél szalvétatartó",
+   "occ": "V31 / Készlet HU"
+  },
+  "73": {
+   "name": "Tartufata szósz 0,8 kg",
+   "occ": "V31 / Készlet HU"
+  },
+  "74": {
+   "name": "Sütőtökkrém (Crema Di Zucca)",
+   "occ": "V31"
+  },
+  "75": {
+   "name": "Palást csoki mousse",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "76": {
+   "name": "Spenót",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "77": {
+   "name": "Coca-Cola 0,5L",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "78": {
+   "name": "Coca-Cola ZERO 0,5L",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "79": {
+   "name": "Málna-Limonádé",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "80": {
+   "name": "Fűszeres paradicsom sűrítmény",
+   "occ": "V31"
+  },
+  "81": {
+   "name": "Karamelizált hagyma",
+   "occ": "V31"
+  },
+  "82": {
+   "name": "Aglio polvere fokhagymapor",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "83": {
+   "name": "Mini Habcsók",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "84": {
+   "name": "Nutella",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "85": {
+   "name": "Olívabogyó",
+   "occ": "V31"
+  },
+  "86": {
+   "name": "Oregano",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "87": {
+   "name": "Vöröshagyma",
+   "occ": "V31"
+  },
+  "88": {
+   "name": "Tonhal",
+   "occ": "V31"
+  },
+  "89": {
+   "name": "Suma Bac D10 szórófejes adagoló flakon",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "90": {
+   "name": "Konzerves sűrített paradicsom",
+   "occ": "V31"
+  },
+  "91": {
+   "name": "Fém liszt szita",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "92": {
+   "name": "Arrabiata szósz gyártott",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "93": {
+   "name": "Pesto szósz gyártott",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "94": {
+   "name": "Szeletelt mandula",
+   "occ": "V31"
+  },
+  "95": {
+   "name": "Rucola",
+   "occ": "V31"
+  },
+  "96": {
+   "name": "Cappy ALMA",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "97": {
+   "name": "Cappy NARANCS",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "98": {
+   "name": "Red Bull Zero",
+   "occ": "V31 / Készlet HU"
+  },
+  "99": {
+   "name": "",
+   "occ": "V31"
+  },
+  "100": {
+   "name": "",
+   "occ": "V31 / Készlet SK"
+  },
+  "101": {
+   "name": "Pilsner Urquell",
+   "occ": "V31 / Készlet SK"
+  },
+  "102": {
+   "name": "",
+   "occ": "V31"
+  },
+  "103": {
+   "name": "Liszt \"piros\"",
+   "occ": "V31"
+  },
+  "104": {
+   "name": "TK liszt",
+   "occ": "V31"
+  },
+  "105": {
+   "name": "Lievito Birra",
+   "occ": "V31"
+  },
+  "106": {
+   "name": "Paccheri",
+   "occ": "V31"
+  },
+  "107": {
+   "name": "Gnocchi",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "108": {
+   "name": "Pelatti",
+   "occ": "V31"
+  },
+  "109": {
+   "name": "Paradicsom sűrítmény",
+   "occ": "V31"
+  },
+  "110": {
+   "name": "Olívaolaj",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "111": {
+   "name": "Étolaj",
+   "occ": "V31"
+  },
+  "112": {
+   "name": "Szeletelt koktélaparadicsom",
+   "occ": "V31"
+  },
+  "113": {
+   "name": "Cukor",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "114": {
+   "name": "Frutta Max szörp(limo szirup)",
+   "occ": "V31"
+  },
+  "115": {
+   "name": "Bodza-Limonádé",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "116": {
+   "name": "Fuzetea Eper",
+   "occ": "V31 / Készlet HU"
+  },
+  "117": {
+   "name": "PizzaME Pizzavágó",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "118": {
+   "name": "RIA körmatrica 5cm",
+   "occ": "V31"
+  },
+  "119": {
+   "name": "Edami",
+   "occ": "V31"
+  },
+  "120": {
+   "name": "Tartufone csokoládé 150g",
+   "occ": "V31 / Készlet SK"
+  },
+  "121": {
+   "name": "Tre Marie mogyorós nápolyi 175g",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "122": {
+   "name": "Feta",
+   "occ": "V31"
+  },
+  "123": {
+   "name": "PizzaME Chili olaj",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "124": {
+   "name": "PizzaME fokhagyma olaj",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "125": {
+   "name": "Speck",
+   "occ": "V31"
+  },
+  "126": {
+   "name": "Sonka Cotto",
+   "occ": "V31"
+  },
+  "127": {
+   "name": "Spinata Calabra",
+   "occ": "V31"
+  },
+  "128": {
+   "name": "",
+   "occ": "V31"
+  },
+  "129": {
+   "name": "Csokis keksz 200g",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "130": {
+   "name": "Spiaria Szalámi",
+   "occ": "V31"
+  },
+  "131": {
+   "name": "Funghi Porcini 0,85 kg",
+   "occ": "V31"
+  },
+  "132": {
+   "name": "Pancetta Tartufo",
+   "occ": "V31"
+  },
+  "133": {
+   "name": "Szószos tálka XXL egybefedeles",
+   "occ": "V31 / Készlet HU"
+  },
+  "134": {
+   "name": "Pepperoni szalámi",
+   "occ": "V31"
+  },
+  "135": {
+   "name": "Dulciar étcsokoládé 80g",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "136": {
+   "name": "Profiterol",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "137": {
+   "name": "Tiramisu",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "138": {
+   "name": "Tengeri só",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "139": {
+   "name": "Pepperoncino (egész)",
+   "occ": "V31"
+  },
+  "140": {
+   "name": "Pepperoncino Contuso (őrölt)",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "141": {
+   "name": "Feketebors őrölt",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "142": {
+   "name": "Ice Coffee Cappuccino",
+   "occ": "V31 / Készlet HU"
+  },
+  "143": {
+   "name": "Ice Coffee Slim vanilia",
+   "occ": "V31 / Készlet HU"
+  },
+  "144": {
+   "name": "Padlizsán",
+   "occ": "V31"
+  },
+  "145": {
+   "name": "Bazsalikom",
+   "occ": "V31"
+  },
+  "146": {
+   "name": "Lilahagyma",
+   "occ": "V31"
+  },
+  "147": {
+   "name": "Fokhagyma",
+   "occ": "V31"
+  },
+  "148": {
+   "name": "Gnocchi tálka",
+   "occ": "V31"
+  },
+  "149": {
+   "name": "Fenyőmag",
+   "occ": "V31"
+  },
+  "150": {
+   "name": "Sárga (fagyasztott) Paprika",
+   "occ": "V31"
+  },
+  "151": {
+   "name": "Papír tálca nyomatlan",
+   "occ": "V31"
+  },
+  "152": {
+   "name": "Cukkini",
+   "occ": "V31"
+  },
+  "153": {
+   "name": "Kalifornia paprika",
+   "occ": "V31"
+  },
+  "154": {
+   "name": "Zsírpapír",
+   "occ": "V31"
+  },
+  "155": {
+   "name": "Sprite 0,33",
+   "occ": "V31"
+  },
+  "156": {
+   "name": "San Benedetto mentes víz",
+   "occ": "V31 / Készlet HU"
+  },
+  "157": {
+   "name": "Cappy Ice Fruit Multivitamin 0,5l",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "158": {
+   "name": "Naturaqua mentes 1,5l",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "159": {
+   "name": "Naturaqua savas 1,5l",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "160": {
+   "name": "Naturaqua mentes 0,5l",
+   "occ": "V31 / Készlet HU"
+  },
+  "161": {
+   "name": "Naturaqua savas 0,5l",
+   "occ": "V31 / Készlet HU"
+  },
+  "162": {
+   "name": "Coca Cola",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "163": {
+   "name": "Coca ZERO",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "164": {
+   "name": "Limonádé",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "165": {
+   "name": "Sp citrom",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "166": {
+   "name": "Sp narancs",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "167": {
+   "name": "Kinley Pink Aromatic Berry 0,5l",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "168": {
+   "name": "Kinley Gyömbér 0,5",
+   "occ": "V31 / Készlet HU"
+  },
+  "169": {
+   "name": "Coca-Cola 1 LITER",
+   "occ": "V31 / Készlet HU"
+  },
+  "170": {
+   "name": "Coca-Cola Zero 1 LITER",
+   "occ": "V31 / Készlet HU"
+  },
+  "171": {
+   "name": "Limonádé Alap",
+   "occ": "V31"
+  },
+  "172": {
+   "name": "Citromlé",
+   "occ": "V31"
+  },
+  "173": {
+   "name": "FUZETEA BARACK 0,5L",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "174": {
+   "name": "FUZETEA CITROM 0,5L",
+   "occ": "V31 / Készlet HU"
+  },
+  "175": {
+   "name": "Red Bull Barack Eper",
+   "occ": "V31 / Készlet HU"
+  },
+  "176": {
+   "name": "Red Bull Fuji Alma Gyömbér",
+   "occ": "V31 / Készlet HU"
+  },
+  "177": {
+   "name": "Coca-Cola Koffeinmentes Zero 0,33l",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "178": {
+   "name": "Red Bull",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "179": {
+   "name": "Red Bull Summer Edition (Sudachi lime)",
+   "occ": "V31 / Készlet HU"
+  },
+  "180": {
+   "name": "Gyerekjáték",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "181": {
+   "name": "Cukortartó műanyag",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "182": {
+   "name": "1/2 csepegtető (zöldségek-spenót)",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "183": {
+   "name": "Ételfólia",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "184": {
+   "name": "Körtálca",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "185": {
+   "name": "Papír tálca",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "186": {
+   "name": "Papírszalvéta",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "187": {
+   "name": "Papírzacskó",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "188": {
+   "name": "Pizza doboz 25x45",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "189": {
+   "name": "Pizza doboz 45",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "190": {
+   "name": "Pizza doboz 32",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "191": {
+   "name": "Pizza távtartó/500",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "192": {
+   "name": "Személyzeti Műanyagpohár",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "193": {
+   "name": "Ételecet",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "194": {
+   "name": "Fémlapát nyéllel (galvanizált)",
+   "occ": "V31 / Készlet HU"
+  },
+  "195": {
+   "name": "Folpack",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "196": {
+   "name": "Kéztörlő",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "197": {
+   "name": "Fémdörzsi",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "198": {
+   "name": "Gumikesztyű",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "199": {
+   "name": "Nylon(Fóliakesztyű)",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "200": {
+   "name": "Mosogatószívacs",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "201": {
+   "name": "Vileda törlőkendő",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "202": {
+   "name": "WC papír",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "203": {
+   "name": "Papírszívószál",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "204": {
+   "name": "Fertőtlenítő adagoló szenzoros",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "205": {
+   "name": "Nylonkesztyűtartó",
+   "occ": "V31 / Készlet HU"
+  },
+  "206": {
+   "name": "Habverő",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "207": {
+   "name": "Hűtőhőmérő",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "208": {
+   "name": "Maghőmérő",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "209": {
+   "name": "Kés",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "210": {
+   "name": "Konzervnyító (kicsi)",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "211": {
+   "name": "Nutella kenő",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "212": {
+   "name": "Pénzvisszaadó tálca",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "213": {
+   "name": "Szószos fémtál",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "214": {
+   "name": "Szűrőtál",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "215": {
+   "name": "Rukkolás Zacskó",
+   "occ": "V31 / Készlet HU"
+  },
+  "216": {
+   "name": "Habzsák záró csipesz",
+   "occ": "V31 / Készlet HU"
+  },
+  "217": {
+   "name": "Fiscat pénztárgépszalag",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "218": {
+   "name": "Terminál szalag",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "219": {
+   "name": "Ipari kéztörlő",
+   "occ": "V31"
+  },
+  "220": {
+   "name": "Fémvonalzó",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "221": {
+   "name": "Domestos",
+   "occ": "V31 / Készlet SK"
+  },
+  "222": {
+   "name": "Műanyag badella 1/1 20 l",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "223": {
+   "name": "Gépi Mosogatószer",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "224": {
+   "name": "Gyorsfertőtlenítő",
+   "occ": "V31 / Készlet HU"
+  },
+  "225": {
+   "name": "Műanyag badella 1/2 10l",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "226": {
+   "name": "Belsőmagos",
+   "occ": "V31"
+  },
+  "227": {
+   "name": "Kéztörlő adagoló",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "228": {
+   "name": "Szemeteszsák",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "229": {
+   "name": "Lay's chips 60g",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "230": {
+   "name": "",
+   "occ": "V31"
+  },
+  "231": {
+   "name": "Amica burgonyás snack 100g",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "232": {
+   "name": "",
+   "occ": "V31"
+  },
+  "233": {
+   "name": "Dulciar tejcsokoládé 80g",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "234": {
+   "name": "",
+   "occ": "V31"
+  },
+  "235": {
+   "name": "Groksi sajttallér 60g",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "236": {
+   "name": "Cantuccini mandulás keksz 250g",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "237": {
+   "name": "Ciopettini ropogós falatok 200g",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "238": {
+   "name": "Szarvasgombás burgonyachips 40g",
+   "occ": "V31"
+  },
+  "239": {
+   "name": "",
+   "occ": "V31"
+  },
+  "240": {
+   "name": "",
+   "occ": "V31"
+  },
+  "241": {
+   "name": "",
+   "occ": "V31"
+  },
+  "242": {
+   "name": "Grisbi keksz pisztáciás töltelékkel 135g",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "243": {
+   "name": "Grisbi keksz csokoládés töltelékkel 135g",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "244": {
+   "name": "Fűszerszóró",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "245": {
+   "name": "Kiöntőcsőr",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "246": {
+   "name": "Olajos üveg (cola)",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "247": {
+   "name": "Sószóró",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "248": {
+   "name": "Műanyag badella 1/2 4l",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "249": {
+   "name": "Kemence kefe rézfejes",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "250": {
+   "name": "Kemence világítás üvegbúra",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "251": {
+   "name": "Mérleg",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "252": {
+   "name": "Mérőedény ",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "253": {
+   "name": "Merőkanál szószos sárga nagy",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "254": {
+   "name": "Nagy pizzalapát",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "255": {
+   "name": "Pizza forgatólapát",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "256": {
+   "name": "Pizzalapát (hamburger)",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "257": {
+   "name": "Merőkanál szószos zöld kicsi",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "258": {
+   "name": "Műanyag badella 1/1 tető",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "259": {
+   "name": "Pizzaspakli",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "260": {
+   "name": "Pizzavágó",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "261": {
+   "name": "Pizzavágó deszka 50",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "262": {
+   "name": "Pizzavágó deszka 32",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "263": {
+   "name": "Réz kefe pótfej",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "264": {
+   "name": "Pizzalapát 32",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "265": {
+   "name": "Műanyag badella 1/2 tető",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "266": {
+   "name": "Pizza szurka (nyárs)",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "267": {
+   "name": "Szórófejes permetező (Fufus üveg)",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "268": {
+   "name": "Palást Profiterol",
+   "occ": "V31 / Készlet HU"
+  },
+  "269": {
+   "name": "Palást Tiramisu",
+   "occ": "V31 / Készlet HU"
+  },
+  "270": {
+   "name": "Szappanadagoló",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "271": {
+   "name": "Szemetesedény (műanyag kuka)",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "272": {
+   "name": "WC kefe tartályos",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "273": {
+   "name": "wc papír tartó",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "274": {
+   "name": "Feltéthűtő elosztó sín",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "275": {
+   "name": "32-es Körtálca",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "276": {
+   "name": "Mosogatókesztyű",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "277": {
+   "name": "PM ragasztószalag",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "278": {
+   "name": "Autómosókefe",
+   "occ": "V31"
+  },
+  "279": {
+   "name": "Lefolyó szűrő",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "280": {
+   "name": "Légfrissítő",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "281": {
+   "name": "Teleszkópos ablaklehuzó",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "282": {
+   "name": "Lángos doboz",
+   "occ": "V31"
+  },
+  "283": {
+   "name": "Két oldalú ragasztószalag ",
+   "occ": "V31 / Készlet SK"
+  },
+  "284": {
+   "name": "Fa kés",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "285": {
+   "name": "Fa villa",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "286": {
+   "name": "Vákumzacskó",
+   "occ": "V31"
+  },
+  "287": {
+   "name": "Vízkőoldó ",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "288": {
+   "name": "Papírpohár",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "289": {
+   "name": "NH Kézfertőtlenítő utántöltő 5L",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "290": {
+   "name": "KV kapszula- személyzeti",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "291": {
+   "name": "WC tisztító folyadék",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "292": {
+   "name": "WC zselé",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "293": {
+   "name": "Acél szemetes kuka (nagyméretű fémkuka)",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "294": {
+   "name": "NH Kézi Mosogatószer 5L",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "295": {
+   "name": "NH Folyékony fertőtlenítő szappan 5L",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "296": {
+   "name": "NH Ipari Zsíroldó 5L",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "297": {
+   "name": "NH Ipari Lefolyótisztító granulátum 880g",
+   "occ": "V31"
+  },
+  "298": {
+   "name": "NH Üvegtisztító 5L",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "299": {
+   "name": "Piros Toll, azért mert pirosan fog",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "300": {
+   "name": "NH Gyorsfertőtlenítő 0,75L",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "301": {
+   "name": "",
+   "occ": "V31"
+  },
+  "302": {
+   "name": "Üvegtisztító kefe",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "303": {
+   "name": "Cellux",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "304": {
+   "name": "Etikett címke",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "305": {
+   "name": "Filctoll",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "306": {
+   "name": "Füzet",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "307": {
+   "name": "Hibajavító",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "308": {
+   "name": "Olló",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "309": {
+   "name": "Post It",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "310": {
+   "name": "Számológép",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "311": {
+   "name": "Toll pizza logos piros de kéken fog",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "312": {
+   "name": "Tűzőgép",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "313": {
+   "name": "Tűzőgép kapocs",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "314": {
+   "name": "NH Alkoholos kézfertőtlenítő 0,5L",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "315": {
+   "name": "Szószos tálka egybefedeles 30ml",
+   "occ": "V31 / Készlet HU"
+  },
+  "316": {
+   "name": "Szószos tálka egybefedeles 50ml",
+   "occ": "V31 / Készlet HU"
+  },
+  "317": {
+   "name": "Dulciar chilis étcsokoládé 80g",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "318": {
+   "name": "Flakon Limonádé",
+   "occ": "V31"
+  },
+  "319": {
+   "name": "Kupak Limonádé",
+   "occ": "V31"
+  },
+  "320": {
+   "name": "Pezsgős Pohár",
+   "occ": "V31"
+  },
+  "321": {
+   "name": "Rovarcsapda",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "322": {
+   "name": "Gnocchi tányér",
+   "occ": "V31"
+  },
+  "323": {
+   "name": "Selejtes gyorskötöző",
+   "occ": "V31"
+  },
+  "324": {
+   "name": "",
+   "occ": "V31"
+  },
+  "325": {
+   "name": "Natura Neperliva (mentes)",
+   "occ": "V31 / Készlet SK"
+  },
+  "326": {
+   "name": "Natura Jemne Perliva (savas)",
+   "occ": "V31 / Készlet SK"
+  },
+  "327": {
+   "name": "Fuzetea Aloe Jahodou (eper)",
+   "occ": "V31 / Készlet SK"
+  },
+  "328": {
+   "name": "Fuzetea Broskyna (barack)",
+   "occ": "V31"
+  },
+  "329": {
+   "name": "Fuzetea Citron (citrom)",
+   "occ": "V31"
+  },
+  "330": {
+   "name": "Coca-Cola(sk)",
+   "occ": "V31"
+  },
+  "331": {
+   "name": "Coca-Cola Zero(sk)",
+   "occ": "V31"
+  },
+  "332": {
+   "name": "Coca-Cola 0,5L(sk)",
+   "occ": "V31"
+  },
+  "333": {
+   "name": "Coca-Cola Zero 0,5L(sk)",
+   "occ": "V31"
+  },
+  "334": {
+   "name": "Cappy Jablko (alma)",
+   "occ": "V31"
+  },
+  "335": {
+   "name": "Cappy Pomaranc (narancs)",
+   "occ": "V31"
+  },
+  "336": {
+   "name": "Peroni(sk)",
+   "occ": "V31"
+  },
+  "337": {
+   "name": "Alkoholmentes Peroni(sk)",
+   "occ": "V31"
+  },
+  "338": {
+   "name": "Pasta tálka",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "339": {
+   "name": "Pasta tálka tető",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "340": {
+   "name": "Pasta tányér",
+   "occ": "V31 / Készlet HU"
+  },
+  "341": {
+   "name": "Pasta Villa",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "342": {
+   "name": "Pénztár kasszafiók",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "343": {
+   "name": "Felíró tábla",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "344": {
+   "name": "Ízjelző táblák",
+   "occ": "V31 / Készlet HU"
+  },
+  "345": {
+   "name": "Ízjelző tábla olajos",
+   "occ": "V31 / Készlet HU"
+  },
+  "346": {
+   "name": "Ízjelző tábla tartó",
+   "occ": "V31 / Készlet HU"
+  },
+  "347": {
+   "name": "Intim szemetes edény",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "348": {
+   "name": "Hőálló sűtőkesztyű",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "349": {
+   "name": "EÜ doboz",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "350": {
+   "name": "Panthenol spray",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "351": {
+   "name": "Álló laptartó (plexi A4 infótábla)",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "352": {
+   "name": "Sörnyitó",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "353": {
+   "name": "Rukkola csipesz",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "354": {
+   "name": "Selejtes láda",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "355": {
+   "name": "PM körmatrica 5cm",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "356": {
+   "name": "EÜ doboz utántöltő",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "357": {
+   "name": "Műanyag tölcsér szűrővel (olajos)",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "358": {
+   "name": "Műanyag szív forma nagy",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "359": {
+   "name": "Műanyag szív forma kicsi",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "360": {
+   "name": "Fogpiszkáló",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "361": {
+   "name": "Szűrőtál tető",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "362": {
+   "name": "Tartós mosogatókesztyű",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "363": {
+   "name": "Sebtapasz",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "364": {
+   "name": "Kv gép",
+   "occ": "V31 / Készlet HU"
+  },
+  "365": {
+   "name": "Mikrohullámú sütő",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "366": {
+   "name": "IKEA szerszámkészlet",
+   "occ": "V31 / Készlet HU"
+  },
+  "367": {
+   "name": "Papírtáska",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "368": {
+   "name": "Habzsák",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "369": {
+   "name": "Fémbadella 1/2",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "370": {
+   "name": "Fémbadella 1/3",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "371": {
+   "name": "Fémbadella 1/6 150mm",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "372": {
+   "name": "Fémbadella 1/2 tető",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "373": {
+   "name": "Fémbadella 1/3 tető",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "374": {
+   "name": "Fémbadella 1/6 tető",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "375": {
+   "name": "Szentkirályi Mentes 0,5L",
+   "occ": "V31 / Készlet HU"
+  },
+  "376": {
+   "name": "Szentkirályi Savas 0,5L",
+   "occ": "V31 / Készlet HU"
+  },
+  "377": {
+   "name": "KOBRA 2 literes mércés kancsó",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "378": {
+   "name": "KOBRA Aluminium falsín 500 mm",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "379": {
+   "name": "KOBRA Aluminium nyél 1300 mm",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "380": {
+   "name": "KOBRA Bix mop",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "381": {
+   "name": "KOBRA Bix mop tartó",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "382": {
+   "name": "KOBRA Felmosóvödör 15 L",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "383": {
+   "name": "KOBRA Ferde vágású seprű (1-es sörte)",
+   "occ": "V31 / Készlet SK"
+  },
+  "384": {
+   "name": "KOBRA Kampó",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "385": {
+   "name": "KOBRA Kenyérnedvesítő kefe",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "386": {
+   "name": "KOBRA Készüléktisztító kefe",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "387": {
+   "name": "KOBRA Mikroszálas törlőkendő",
+   "occ": "V31 / Készlet HU"
+  },
+  "388": {
+   "name": "Lángos távtartó/500",
+   "occ": "V31"
+  },
+  "389": {
+   "name": "Ragasztószalag adagoló",
+   "occ": "V31 / Készlet HU"
+  },
+  "390": {
+   "name": "KOBRA Padlósúroló kültéri",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "391": {
+   "name": "KOBRA seprű (0,3-as sörte)",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "392": {
+   "name": "KOBRA Seprű kültéri (0,5-ös sörte)",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "393": {
+   "name": "KOBRA Seprű puha (0,25-ös sörte)",
+   "occ": "V31 / Készlet SK"
+  },
+  "394": {
+   "name": "KOBRA Sínvégződés",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "395": {
+   "name": "KOBRA Szemeteslapát",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "396": {
+   "name": "KOBRA Csőtisztító kefe(teleszkópos)",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "397": {
+   "name": "PM Forgatólapát",
+   "occ": "V31 / Készlet HU"
+  },
+  "398": {
+   "name": "Információs tábla (A4 fémkeret)",
+   "occ": "V31 / Készlet HU"
+  },
+  "399": {
+   "name": "Infrás Szappanadagoló",
+   "occ": "V31"
+  },
+  "400": {
+   "name": "Szállító roller",
+   "occ": "V31 / Készlet HU"
+  },
+  "401": {
+   "name": "Lebomló fagyiskanál",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "402": {
+   "name": "Fémhűtőhőmérő",
+   "occ": "V31 / Készlet HU"
+  },
+  "403": {
+   "name": "Pizza negyedelő",
+   "occ": "V31 / Készlet HU"
+  },
+  "404": {
+   "name": "Futártasak",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "405": {
+   "name": "Ételfestékes filctoll",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "406": {
+   "name": "Ricotta tartó műanyag",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "407": {
+   "name": "Merőkanál tartu piros",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "408": {
+   "name": "Vágódeszka műanyag",
+   "occ": "V31 / Készlet HU"
+  },
+  "409": {
+   "name": "Pizza emelő állvány",
+   "occ": "V31 / Készlet HU"
+  },
+  "410": {
+   "name": "Fémbadella 1/6 100 mm",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "411": {
+   "name": "Fémbadella 1/2 40mm",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "412": {
+   "name": "Kézműves Sör",
+   "occ": "V31 / Készlet HU"
+  },
+  "413": {
+   "name": "Heineken",
+   "occ": "V31 / Készlet HU"
+  },
+  "414": {
+   "name": "Moretti",
+   "occ": "V31 / Készlet HU"
+  },
+  "415": {
+   "name": "Peroni",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "416": {
+   "name": "Jack&Coke",
+   "occ": "V31 / Készlet HU"
+  },
+  "417": {
+   "name": "Jack&Coke Zero",
+   "occ": "V31"
+  },
+  "418": {
+   "name": "Kreinbacher Prestige Brut",
+   "occ": "V31 / Készlet HU"
+  },
+  "419": {
+   "name": "Piper-Heidseck Cuvée Brut",
+   "occ": "V31 / Készlet HU"
+  },
+  "420": {
+   "name": "",
+   "occ": "V31"
+  },
+  "421": {
+   "name": "Vodka",
+   "occ": "V31"
+  },
+  "422": {
+   "name": "",
+   "occ": "V31"
+  },
+  "423": {
+   "name": "",
+   "occ": "V31"
+  },
+  "424": {
+   "name": "P Paprika mix",
+   "occ": "V31"
+  },
+  "425": {
+   "name": "Gyros csirke",
+   "occ": "V31"
+  },
+  "426": {
+   "name": "P Fokhagymás joghurt",
+   "occ": "V31"
+  },
+  "427": {
+   "name": "Kötözött spárga",
+   "occ": "V31 / Készlet HU"
+  },
+  "428": {
+   "name": "P Jalapeno",
+   "occ": "V31"
+  },
+  "429": {
+   "name": "P Cheddar",
+   "occ": "V31"
+  },
+  "430": {
+   "name": "Palacsintasütő 24cm",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "431": {
+   "name": "Fémbadella 1/6 65 mm",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "432": {
+   "name": "Pizza doboz 22",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "433": {
+   "name": "Kukorica",
+   "occ": "V31"
+  },
+  "434": {
+   "name": "P Fokhagymás majonéz",
+   "occ": "V31"
+  },
+  "435": {
+   "name": "Paradicsomos bab",
+   "occ": "V31"
+  },
+  "436": {
+   "name": "Pizza Ria távtartó/500",
+   "occ": "V31"
+  },
+  "437": {
+   "name": "P Erős pistás majonéz",
+   "occ": "V31"
+  },
+  "438": {
+   "name": "P Fűszeres csirkemell",
+   "occ": "V31"
+  },
+  "439": {
+   "name": "Görög joghurt",
+   "occ": "V31"
+  },
+  "440": {
+   "name": "Savanyított pepperoni",
+   "occ": "V31"
+  },
+  "441": {
+   "name": "Csirkemell",
+   "occ": "V31"
+  },
+  "442": {
+   "name": "Cheddar",
+   "occ": "V31"
+  },
+  "443": {
+   "name": "BBQ szósz",
+   "occ": "V31"
+  },
+  "444": {
+   "name": "Ananász",
+   "occ": "V31"
+  },
+  "445": {
+   "name": "Szeletelt gomba",
+   "occ": "V31"
+  },
+  "446": {
+   "name": "22cm Ria doboz",
+   "occ": "V31"
+  },
+  "447": {
+   "name": "Majonéz",
+   "occ": "V31"
+  },
+  "448": {
+   "name": "32cm Ria doboz",
+   "occ": "V31"
+  },
+  "449": {
+   "name": "Jalapeno",
+   "occ": "V31"
+  },
+  "450": {
+   "name": "Erős pista",
+   "occ": "V31"
+  },
+  "451": {
+   "name": "Vegeta",
+   "occ": "V31"
+  },
+  "452": {
+   "name": "Pasta keverőtál (zöld)",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "453": {
+   "name": "Pepsi Cola 0,33L",
+   "occ": "V31 / Készlet HU"
+  },
+  "454": {
+   "name": "Pepsi Zero 0,33L",
+   "occ": "V31 / Készlet HU"
+  },
+  "455": {
+   "name": "Pepsi Cola 0,5L",
+   "occ": "V31 / Készlet HU"
+  },
+  "456": {
+   "name": "Pepsi Zero 0,5L",
+   "occ": "V31 / Készlet HU"
+  },
+  "457": {
+   "name": "Pepsi Cola 1L",
+   "occ": "V31 / Készlet HU"
+  },
+  "458": {
+   "name": "Pepsi Zero 1L",
+   "occ": "V31 / Készlet HU"
+  },
+  "459": {
+   "name": "Lipton Barackos Tea 0,5L",
+   "occ": "V31 / Készlet HU"
+  },
+  "460": {
+   "name": "Lipton Citromos Tea 0,5L",
+   "occ": "V31 / Készlet HU"
+  },
+  "461": {
+   "name": "Lipton Zöld Tea 0,5L",
+   "occ": "V31 / Készlet HU"
+  },
+  "462": {
+   "name": "",
+   "occ": "V31"
+  },
+  "463": {
+   "name": "",
+   "occ": "V31"
+  },
+  "464": {
+   "name": "",
+   "occ": "V31"
+  },
+  "465": {
+   "name": "",
+   "occ": "V31"
+  },
+  "466": {
+   "name": "Pasta doboz palást",
+   "occ": "V31 / Készlet HU"
+  },
+  "467": {
+   "name": "Pasta melegítő tál (Quecha)",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "468": {
+   "name": "Tefal aprító",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "469": {
+   "name": "Tésztatartó műanyag",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "470": {
+   "name": "Védőszemüveg",
+   "occ": "V31 / Készlet HU"
+  },
+  "471": {
+   "name": "Körmatrica 35mm chili olajos",
+   "occ": "V31 / Készlet HU"
+  },
+  "472": {
+   "name": "Körmatrica 35mm fokhagyma olajos",
+   "occ": "V31 / Készlet HU"
+  },
+  "473": {
+   "name": "Körmatrica 35mm oregano pehely",
+   "occ": "V31 / Készlet HU"
+  },
+  "474": {
+   "name": "Körmatrica 35mm chili pehely",
+   "occ": "V31 / Készlet HU"
+  },
+  "475": {
+   "name": "Körmatrica Só",
+   "occ": "V31 / Készlet HU"
+  },
+  "476": {
+   "name": "Körmatrica Fokhagymapor",
+   "occ": "V31 / Készlet HU"
+  },
+  "477": {
+   "name": "Olajosüveg Matrica",
+   "occ": "V31 / Készlet HU"
+  },
+  "478": {
+   "name": "Fűszerszóró Matrica",
+   "occ": "V31 / Készlet HU"
+  },
+  "479": {
+   "name": "RIA körmatrica 30mm",
+   "occ": "V31"
+  },
+  "480": {
+   "name": "Cumisüveg",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "481": {
+   "name": "Ipari konzervnyitó",
+   "occ": "V31 / Készlet HU"
+  },
+  "482": {
+   "name": "Műanyag tölcsér (tisztítószeres)",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "483": {
+   "name": "Fém evőkanál",
+   "occ": "V31"
+  },
+  "484": {
+   "name": "Szilikon spatula",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "485": {
+   "name": "Keverőtál 2,5l Pasta",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "486": {
+   "name": "Merőkanál pasta 30ml",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "487": {
+   "name": "",
+   "occ": "V31"
+  },
+  "488": {
+   "name": "",
+   "occ": "V31"
+  },
+  "489": {
+   "name": "",
+   "occ": "V31"
+  },
+  "490": {
+   "name": "",
+   "occ": "V31"
+  },
+  "491": {
+   "name": "Torrone Tenero 150g",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "492": {
+   "name": "Ketchup 10ml",
+   "occ": "V31 / Készlet HU"
+  },
+  "493": {
+   "name": "Majonéz 10ml",
+   "occ": "V31 / Készlet HU"
+  },
+  "494": {
+   "name": "Lasagne / Cannelloni tál",
+   "occ": "V31 / Készlet HU"
+  },
+  "495": {
+   "name": "PM kockajáték épület",
+   "occ": "V31 / Készlet HU"
+  },
+  "496": {
+   "name": "PM kockajáték figura",
+   "occ": "V31 / Készlet HU"
+  },
+  "497": {
+   "name": "Fémbadella 1/9 100mm",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "498": {
+   "name": "Fémbadella 1/9 tető",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "499": {
+   "name": "Canneloni",
+   "occ": "V31"
+  },
+  "500": {
+   "name": "Lasagne",
+   "occ": "V31"
+  },
+  "501": {
+   "name": "Csokis Mousse",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "502": {
+   "name": "Gelato Nutella krémmel",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "503": {
+   "name": "Gelato Tartufata",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "504": {
+   "name": "Gelato Pistachio-Mascarpone",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "505": {
+   "name": "GymBeam kanál szett",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "506": {
+   "name": "Grissini paradicsom - oregánó 100g",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "507": {
+   "name": "Grissini fokhagyma - chili 100g",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "508": {
+   "name": "Grissini burgonya - rozmaring 100g",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "509": {
+   "name": "Krumi csokoládés keksz 150g",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "510": {
+   "name": "Hőálló csipesz",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "511": {
+   "name": "Suma Star D1 5L (kézi mosogatószer)",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "512": {
+   "name": "Soft Care Des alkoholos kézfertőtlenítő 5L",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "513": {
+   "name": "Suma Bac-Conc D10 (gyorsfertőtlenítő)",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "514": {
+   "name": "Sure Antimic kézmosó szappan",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "515": {
+   "name": "Deogen Gépi mosogatószer 20L",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "516": {
+   "name": "Taski Sprint 200 üvegtisztító oldat",
+   "occ": "V31"
+  },
+  "517": {
+   "name": "Suma Grill D9 zsíroldó oldat",
+   "occ": "V31"
+  },
+  "518": {
+   "name": "Taski Sani 4in1 vízkőoldó oldat",
+   "occ": "V31"
+  },
+  "519": {
+   "name": "Taski Sprint 200 üvegtisztító hígított",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "520": {
+   "name": "Suma Grill D9 zsíroldó hígitott",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "521": {
+   "name": "Taski Sani 4in1 vízkőoldó hígitott",
+   "occ": "V31 / Készlet HU / Készlet SK"
+  },
+  "522": {
+   "name": "Álló laptartó plexi A5 infótábla",
+   "occ": "V31 / Készlet HU"
+  },
+  "523": {
+   "name": "Lapos tányér",
+   "occ": "V31 / Készlet HU"
+  },
+  "524": {
+   "name": "Fém villa",
+   "occ": "V31 / Készlet HU"
+  },
+  "525": {
+   "name": "Fém kés",
+   "occ": "V31 / Készlet HU"
+  },
+  "526": {
+   "name": "Fém evőeszköztartó",
+   "occ": "V31 / Készlet HU"
+  },
+  "527": {
+   "name": "Dátumbélyegző",
+   "occ": "V31 / Készlet HU"
+  },
+  "528": {
+   "name": "Tégely- Fagyi",
+   "occ": "V31"
+  },
+  "529": {
+   "name": "PM kockajáték food truck",
+   "occ": "V31"
+  },
+  "530": {
+   "name": "",
+   "occ": "V31"
+  },
+  "531": {
+   "name": "",
+   "occ": "V31"
+  },
+  "532": {
+   "name": "",
+   "occ": "V31"
+  },
+  "533": {
+   "name": "",
+   "occ": "V31"
+  },
+  "534": {
+   "name": "",
+   "occ": "V31"
+  },
+  "535": {
+   "name": "",
+   "occ": "V31"
+  },
+  "536": {
+   "name": "",
+   "occ": "V31"
+  },
+  "537": {
+   "name": "",
+   "occ": "V31"
+  },
+  "538": {
+   "name": "",
+   "occ": "V31"
+  },
+  "539": {
+   "name": "",
+   "occ": "V31"
+  },
+  "540": {
+   "name": "",
+   "occ": "V31"
+  },
+  "541": {
+   "name": "",
+   "occ": "V31"
+  },
+  "542": {
+   "name": "",
+   "occ": "V31"
+  },
+  "543": {
+   "name": "",
+   "occ": "V31"
+  },
+  "544": {
+   "name": "",
+   "occ": "V31"
+  },
+  "545": {
+   "name": "",
+   "occ": "V31"
+  },
+  "546": {
+   "name": "",
+   "occ": "V31"
+  },
+  "547": {
+   "name": "",
+   "occ": "V31"
+  },
+  "548": {
+   "name": "",
+   "occ": "V31"
+  },
+  "549": {
+   "name": "",
+   "occ": "V31"
+  },
+  "550": {
+   "name": "",
+   "occ": "V31"
+  },
+  "551": {
+   "name": "",
+   "occ": "V31"
+  },
+  "552": {
+   "name": "",
+   "occ": "V31"
+  },
+  "553": {
+   "name": "",
+   "occ": "V31"
+  },
+  "554": {
+   "name": "",
+   "occ": "V31"
+  },
+  "555": {
+   "name": "",
+   "occ": "V31"
+  },
+  "556": {
+   "name": "",
+   "occ": "V31"
+  },
+  "557": {
+   "name": "",
+   "occ": "V31"
+  },
+  "558": {
+   "name": "",
+   "occ": "V31"
+  },
+  "559": {
+   "name": "",
+   "occ": "V31"
+  },
+  "560": {
+   "name": "",
+   "occ": "V31"
+  },
+  "561": {
+   "name": "",
+   "occ": "V31"
+  },
+  "562": {
+   "name": "",
+   "occ": "V31"
+  },
+  "563": {
+   "name": "",
+   "occ": "V31"
+  },
+  "564": {
+   "name": "",
+   "occ": "V31"
+  },
+  "565": {
+   "name": "",
+   "occ": "V31"
+  },
+  "566": {
+   "name": "",
+   "occ": "V31"
+  },
+  "567": {
+   "name": "",
+   "occ": "V31"
+  },
+  "568": {
+   "name": "",
+   "occ": "V31"
+  },
+  "569": {
+   "name": "",
+   "occ": "V31"
+  },
+  "570": {
+   "name": "",
+   "occ": "V31"
+  },
+  "571": {
+   "name": "",
+   "occ": "V31"
+  },
+  "572": {
+   "name": "",
+   "occ": "V31"
+  },
+  "573": {
+   "name": "",
+   "occ": "V31"
+  },
+  "574": {
+   "name": "",
+   "occ": "V31"
+  },
+  "575": {
+   "name": "",
+   "occ": "V31"
+  },
+  "576": {
+   "name": "",
+   "occ": "V31"
+  },
+  "577": {
+   "name": "",
+   "occ": "V31"
+  },
+  "578": {
+   "name": "",
+   "occ": "V31"
+  },
+  "579": {
+   "name": "",
+   "occ": "V31"
+  },
+  "580": {
+   "name": "",
+   "occ": "V31"
+  },
+  "581": {
+   "name": "",
+   "occ": "V31"
+  },
+  "582": {
+   "name": "",
+   "occ": "V31"
+  },
+  "583": {
+   "name": "",
+   "occ": "V31"
+  },
+  "584": {
+   "name": "",
+   "occ": "V31"
+  },
+  "585": {
+   "name": "",
+   "occ": "V31"
+  },
+  "586": {
+   "name": "",
+   "occ": "V31"
+  },
+  "587": {
+   "name": "",
+   "occ": "V31"
+  },
+  "588": {
+   "name": "",
+   "occ": "V31"
+  },
+  "589": {
+   "name": "",
+   "occ": "V31"
+  },
+  "590": {
+   "name": "",
+   "occ": "V31"
+  },
+  "591": {
+   "name": "",
+   "occ": "V31"
+  },
+  "592": {
+   "name": "",
+   "occ": "V31"
+  },
+  "593": {
+   "name": "",
+   "occ": "V31"
+  },
+  "594": {
+   "name": "",
+   "occ": "V31"
+  },
+  "595": {
+   "name": "",
+   "occ": "V31"
+  },
+  "596": {
+   "name": "",
+   "occ": "V31"
+  },
+  "597": {
+   "name": "e",
+   "occ": "V31"
+  }
+ },
+ "hu_codes": [
+  "A01",
+  "A02",
+  "A03",
+  "A04",
+  "A05",
+  "A06",
+  "A07",
+  "A08",
+  "A09",
+  "A10",
+  "B01",
+  "B02",
+  "B03",
+  "B04",
+  "B05",
+  "B06",
+  "B07",
+  "B08",
+  "B09",
+  "D03",
+  "D04",
+  "D05",
+  "D09",
+  "D10",
+  "E01",
+  "E06",
+  "E07",
+  "E08",
+  "B010",
+  "C04",
+  "D02",
+  "E02",
+  "C08",
+  "C01",
+  "C02",
+  "C03",
+  "C05",
+  "C06",
+  "C07",
+  "D06",
+  "D07",
+  "D08",
+  "C10",
+  "C09"
+ ],
+ "final_layout": [
+  [
+   "C",
+   "A01",
+   "(01) Király"
+  ],
+  [
+   "D",
+   "A02",
+   "(02) Erzsébet 51"
+  ],
+  [
+   "E",
+   "A03",
+   "(03) Fashion"
+  ],
+  [
+   "F",
+   "A04",
+   "(04) Bazilika"
+  ],
+  [
+   "G",
+   "A05",
+   "(05) Széll Kál."
+  ],
+  [
+   "H",
+   "A06",
+   "(06) Corvin"
+  ],
+  [
+   "I",
+   "A07",
+   "(07) Károly"
+  ],
+  [
+   "J",
+   "A08",
+   "(08) Dob"
+  ],
+  [
+   "K",
+   "A09",
+   "(09) Blaha"
+  ],
+  [
+   "L",
+   "A10",
+   "(10) Oktogon"
+  ],
+  [
+   "M",
+   "B01",
+   "(11) Wesselényi"
+  ],
+  [
+   "N",
+   "B02",
+   "(12) Astoria"
+  ],
+  [
+   "O",
+   "B03",
+   "(13) Erzs. 14."
+  ],
+  [
+   "P",
+   "B04",
+   "(14) Gomba"
+  ],
+  [
+   "Q",
+   "B05",
+   "(15) Móricz"
+  ],
+  [
+   "R",
+   "B06",
+   "(16) Keleti"
+  ],
+  [
+   "S",
+   "B07",
+   "(17) Fővám Tér"
+  ],
+  [
+   "T",
+   "B08",
+   "(18) Ferenciek t."
+  ],
+  [
+   "U",
+   "B09",
+   "(19) Jászai"
+  ],
+  [
+   "V",
+   "B010",
+   "Újpest"
+  ],
+  [
+   "W",
+   "C01",
+   "Truck 1"
+  ],
+  [
+   "X",
+   "C02",
+   "Truck 2"
+  ],
+  [
+   "Y",
+   "C03",
+   "Truck 3"
+  ],
+  [
+   "Z",
+   "C04",
+   "K1 Pólus"
+  ],
+  [
+   "AA",
+   "C05",
+   "(F1) Siófok"
+  ],
+  [
+   "AB",
+   "C06",
+   "(F2) Szeged"
+  ],
+  [
+   "AC",
+   "C07",
+   "R1"
+  ],
+  [
+   "AD",
+   "C08",
+   "Budapest Park"
+  ],
+  [
+   "AE",
+   "C09",
+   "(F3) Debrecen"
+  ],
+  [
+   "AF",
+   "C10",
+   "Salföld"
+  ],
+  [
+   "AG",
+   null,
+   null
+  ],
+  [
+   "AH",
+   "D02",
+   "D1 Buda"
+  ],
+  [
+   "AI",
+   "D03",
+   "(20) Etele Plaza"
+  ],
+  [
+   "AJ",
+   "D04",
+   "(21) Óbuda"
+  ],
+  [
+   "AK",
+   "D05",
+   "(22) Kispest"
+  ],
+  [
+   "AL",
+   "D06",
+   "(F4) Pécs"
+  ],
+  [
+   "AM",
+   "D07",
+   "(F5) Miskolc"
+  ],
+  [
+   "AN",
+   "D08",
+   "R2"
+  ],
+  [
+   "AO",
+   "D09",
+   "(23) Bosnyák"
+  ],
+  [
+   "AP",
+   "D10",
+   "(24) Árkád"
+  ],
+  [
+   "AQ",
+   "E01",
+   "(25) Kazinczy"
+  ],
+  [
+   "AR",
+   "E02",
+   "D2 Pest"
+  ],
+  [
+   "AS",
+   "E03",
+   "BR1"
+  ],
+  [
+   "AT",
+   "E04",
+   "BR2"
+  ],
+  [
+   "AU",
+   null,
+   null
+  ],
+  [
+   "AV",
+   "E06",
+   "(26) Eleven"
+  ],
+  [
+   "AW",
+   "E07",
+   "PM27"
+  ],
+  [
+   "AX",
+   "E08",
+   "(28) GoBuda"
+  ],
+  [
+   "AY",
+   "E09",
+   "Mom"
+  ],
+  [
+   "AZ",
+   "E10",
+   "Terpolit"
+  ],
+  [
+   "BA",
+   null,
+   null
+  ],
+  [
+   "BB",
+   null,
+   null
+  ]
+ ],
+ "sk_remap": {
+  "162": 330,
+  "163": 331,
+  "77": 332,
+  "78": 333,
+  "415": 336,
+  "100": 337,
+  "96": 334,
+  "97": 335,
+  "173": 328
+ },
+ "sk_stores": {
+  "Michalska (1)": "E03",
+  "Kolárska (2)": "E04"
+ }
+}
