@@ -15,7 +15,7 @@ lapon jelzi a kimaradt (index nélküli) sorokat és a negatívokat. A régi ké
 
 ## Gyors út: vizuális generátor (nincs GitHub feltöltés)
 
-**https://ottobansagi-crypto.github.io/pizzame-keszlet/**
+**https://ottobansagi-crypto.github.io/pizzame-keszlet-generator/**
 
 Nyisd meg ezt a linket, húzd be a HU és SK exportot, kattints **Készlet feltöltés
 generálása** – az eredmény azonnal letöltődik a böngészőből. A két nyers fájl
@@ -23,9 +23,13 @@ soha nem hagyja el a gépedet: a feldolgozás teljes egészében a böngészőbe
 (JavaScript), nem kerül fel sehova. Ez ugyanazt a transzformációt végzi, mint a
 lenti GitHub Actions folyamat, csak fájlfeltöltés és várakozás nélkül.
 
-> A generátor oldal (és a hozzá tartozó `config.json` termék-névtábla) a Pages
-> linken technikailag bárki számára elérhető, aki ismeri az URL-t – de a nyers
-> készletadat (a feltöltött HU/SK fájlok tartalma) sosem kerül ki innen.
+A generátor egy külön, **publikus** repóban (`pizzame-keszlet-generator`) él,
+mert a GitHub Pages ingyenes csomaggal csak publikus repóból szolgál ki oldalt.
+Ott kizárólag az `index.html` és a `config.json` termék-névtábla van – valódi
+készletadat oda soha nem kerül, a feltöltött HU/SK fájlok tartalma a
+böngészőből ki sem lép. Ha itt, ebben a (privát) repóban változik a
+`config.json`, ugyanazt a fájlt a másik repóba is át kell másolni és
+commitolni, hogy a generátor naprakész maradjon.
 
 ## Használat (heti futtatás – alternatíva, ha a fenti linket nem használod)
 
