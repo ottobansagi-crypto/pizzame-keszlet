@@ -13,7 +13,21 @@ SK-italok „(sk)” duplikációját, megjelöli a negatív értékeket, és k�
 lapon jelzi a kimaradt (index nélküli) sorokat és a negatívokat. A régi kézi folyamat
 2–20. lépését váltja ki.
 
-## Használat (heti futtatás)
+## Gyors út: vizuális generátor (nincs GitHub feltöltés)
+
+**https://ottobansagi-crypto.github.io/pizzame-keszlet/**
+
+Nyisd meg ezt a linket, húzd be a HU és SK exportot, kattints **Készlet feltöltés
+generálása** – az eredmény azonnal letöltődik a böngészőből. A két nyers fájl
+soha nem hagyja el a gépedet: a feldolgozás teljes egészében a böngészőben fut
+(JavaScript), nem kerül fel sehova. Ez ugyanazt a transzformációt végzi, mint a
+lenti GitHub Actions folyamat, csak fájlfeltöltés és várakozás nélkül.
+
+> A generátor oldal (és a hozzá tartozó `config.json` termék-névtábla) a Pages
+> linken technikailag bárki számára elérhető, aki ismeri az URL-t – de a nyers
+> készletadat (a feltöltött HU/SK fájlok tartalma) sosem kerül ki innen.
+
+## Használat (heti futtatás – alternatíva, ha a fenti linket nem használod)
 
 1. A GitHub weben nyisd meg a repót → `bemenet/` mappa → **Add file → Upload files**.
 2. Húzd be a friss **HU** és **SK** exportot (a régieket előbb töröld a mappából).

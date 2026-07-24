@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Készlet feltöltés generátor</title>
+<script src="https://cdn.jsdelivr.net/npm/exceljs@4.4.0/dist/exceljs.min.js"></script>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap');
+
+  :root {
+    --bg: #f5f4f0;
+    --surface: #ffffff;
+    --surface2: #eeede8;
+    --border: rgba(0,0,0,0.08);
+    --border2: rgba(0,0,0,0.14);
+    --text: #1a1916;
+    --text2: #6b6a65;
+    --text3: #9e9d98;
+    --red: #c0392b;
+    --red-bg: #fdf0ee;
+    --green: #2d6a4f;
+    --green-bg: #edf7f2;
+    --amber: #92400e;
+    --amber-bg: #fef3c7;
+    --accent: #1a1916;
+    --radius: 10px;
+    --radius-lg: 14px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #171613;
+      --surface: #211f1c;
+      --surface2: #2a2824;
+      --border: rgba(255,255,255,0.08);
+      --border2: rgba(255,255,255,0.16);
+      --text: #f0efe9;
+      --text2: #a8a69f;
+      --text3: #75736c;
+      --red: #e57368;
+      --red-bg: #3a211d;
+      --green: #6fbf9a;
+      --green-bg: #1c2e26;
+      --amber: #e0a94a;
+      --amber-bg: #3a2c10;
+      --accent: #f0efe9;
+    }
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .header {
+    background: var(--text);
+    color: var(--bg);
+    padding: 18px 28px;
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .header h1 { font-size: 16px; font-weight: 600; letter-spacing: -0.3px; }
+  .header-meta { font-size: 12px; opacity: 0.55; font-family: 'DM Mono', monospace; }
+
+  .main { max-width: 780px; margin: 0 auto; padding: 28px 20px 60px; }
+
+  .lead { color: var(--text2); font-size: 13px; margin-bottom: 22px; }
+  .lead b { color: var(--text); }
+
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 20px;
+    margin-bottom: 18px;
+  }
+
+  .drop-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  @media (max-width: 560px) { .drop-grid { grid-template-columns: 1fr; } }
+
+  .dropzone {
+    border: 1.5px dashed var(--border2);
+    border-radius: var(--radius);
+    padding: 22px 14px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.15s;
+    background: var(--surface2);
+  }
+  .dropzone:hover, .dropzone.drag { border-color: var(--text); background: var(--surface); }
+  .dropzone.filled { border-style: solid; border-color: var(--green); background: var(--green-bg); }
+  .dz-label { font-weight: 600; font-size: 13px; margin-bottom: 4px; }
+  .dz-sub { font-size: 12px; color: var(--text2); }
+  .dz-file { font-size: 12px; color: var(--green); font-family: 'DM Mono', monospace; margin-top: 6px; word-break: break-all; }
+  .dropzone input { display: none; }
+
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 11px 20px; font-size: 13px; font-weight: 600;
+    border: none; border-radius: var(--radius);
+    background: var(--text); color: var(--bg);
+    cursor: pointer; font-family: 'DM Sans', sans-serif;
+    transition: opacity 0.15s;
+  }
+  .btn:disabled { opacity: 0.35; cursor: not-allowed; }
+  .btn:not(:disabled):hover { opacity: 0.85; }
+
+  .banner {
+    border-radius: var(--radius);
+    padding: 12px 14px;
+    font-size: 12.5px;
+    margin-bottom: 14px;
+    display: none;
+  }
+  .banner.show { display: block; }
+  .banner.err { background: var(--red-bg); color: var(--red); }
+  .banner.warn { background: var(--amber-bg); color: var(--amber); }
+  .banner.ok { background: var(--green-bg); color: var(--green); }
+
+  .metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px; margin: 16px 0; }
+  .metric { background: var(--surface2); border-radius: var(--radius); padding: 12px 14px; }
+  .metric .n { font-size: 20px; font-weight: 600; font-family: 'DM Mono', monospace; }
+  .metric .l { font-size: 11.5px; color: var(--text2); margin-top: 2px; }
+  .metric.bad .n { color: var(--red); }
+  .metric.warn .n { color: var(--amber); }
+
+  details { margin-top: 10px; }
+  summary { cursor: pointer; font-size: 12.5px; color: var(--text2); font-weight: 500; }
+  .log { font-family: 'DM Mono', monospace; font-size: 11.5px; white-space: pre-wrap; color: var(--text2); margin-top: 10px; max-height: 320px; overflow-y: auto; background: var(--surface2); border-radius: var(--radius); padding: 10px 12px; }
+
+  .step { font-size: 11px; text-transform: uppercase; letter-spacing: 0.4px; color: var(--text3); font-weight: 600; margin-bottom: 10px; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Készlet feltöltés generátor</h1>
+  <span class="header-meta">bemenet a böngésződben marad, semmi nem kerül szerverre</span>
+</div>
+
+<div class="main">
+  <p class="lead">
+    Töltsd fel a friss <b>HU</b> és <b>SK</b> Wildom exportot. A feldolgozás teljesen
+    a böngésződben fut le (nem küld semmit sehova) – az eredményt rögtön letöltheted
+    <code>.xlsx</code>-ként. Ugyanazt csinálja, mint a GitHub Actions folyamat, csak
+    fájlfeltöltés és várakozás nélkül.
+  </p>
+
+  <div id="configBanner" class="banner err"></div>
+
+  <div class="card">
+    <div class="step">1. Fájlok</div>
+    <div class="drop-grid">
+      <label class="dropzone" id="dzHu">
+        <input type="file" id="fileHu" accept=".xlsx">
+        <div class="dz-label">HU export</div>
+        <div class="dz-sub">Kattints vagy húzd ide</div>
+        <div class="dz-file" id="dzHuFile"></div>
+      </label>
+      <label class="dropzone" id="dzSk">
+        <input type="file" id="fileSk" accept=".xlsx">
+        <div class="dz-label">SK export</div>
+        <div class="dz-sub">Kattints vagy húzd ide</div>
+        <div class="dz-file" id="dzSkFile"></div>
+      </label>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="step">2. Generálás</div>
+    <button class="btn" id="genBtn" disabled>Készlet feltöltés generálása</button>
+    <div id="genBanner" class="banner"></div>
+  </div>
+
+  <div class="card" id="resultCard" style="display:none">
+    <div class="step">Eredmény</div>
+    <div class="metrics" id="metrics"></div>
+    <details>
+      <summary>Napló megnyitása</summary>
+      <div class="log" id="logView"></div>
+    </details>
+  </div>
+</div>
+
+<script>
+const CONFIG_URL = 'config.json';
+let CONFIG = null, MASTER = null, HU_CODES = null, SK_REMAP = null, SK_STORES = null, LAYOUT = null, SK_REMAP_TARGETS = null;
+
+const configBanner = document.getElementById('configBanner');
+
+fetch(CONFIG_URL + '?v=' + Date.now())
+  .then(r => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+  .then(cfg => {
+    CONFIG = cfg;
+    MASTER = cfg.master;
+    HU_CODES = cfg.hu_codes;
+    SK_REMAP = cfg.sk_remap;
+    SK_STORES = cfg.sk_stores;
+    LAYOUT = cfg.final_layout.filter(row => row[1]);
+    SK_REMAP_TARGETS = new Set(Object.values(SK_REMAP));
+    document.getElementById('genBtn').disabled = !(huFile && skFile);
+  })
+  .catch(err => {
+    configBanner.textContent = 'Nem sikerült betölteni a config.json-t (' + err.message + '). ' +
+      'Ezt az oldalt a GitHub Pages linken keresztül nyisd meg, ne helyi fájlként.';
+    configBanner.classList.add('show');
+  });
+
+let huFile = null, skFile = null;
+
+function setupDrop(zoneId, inputId, fileLabelId, onSet) {
+  const zone = document.getElementById(zoneId);
+  const input = document.getElementById(inputId);
+  const label = document.getElementById(fileLabelId);
+  input.addEventListener('change', () => { if (input.files[0]) accept(input.files[0]); });
+  zone.addEventListener('dragover', e => { e.preventDefault(); zone.classList.add('drag'); });
+  zone.addEventListener('dragleave', () => zone.classList.remove('drag'));
+  zone.addEventListener('drop', e => {
+    e.preventDefault(); zone.classList.remove('drag');
+    if (e.dataTransfer.files[0]) accept(e.dataTransfer.files[0]);
+  });
+  function accept(file) {
+    onSet(file);
+    label.textContent = file.name;
+    zone.classList.add('filled');
+    document.getElementById('genBtn').disabled = !(huFile && skFile) || !CONFIG;
+  }
+}
+setupDrop('dzHu', 'fileHu', 'dzHuFile', f => huFile = f);
+setupDrop('dzSk', 'fileSk', 'dzSkFile', f => skFile = f);
+
+function cellValue(cell) {
+  let v = cell.value;
+  if (v === null || v === undefined) return null;
+  if (typeof v === 'object') {
+    if (v.richText) return v.richText.map(rt => rt.text).join('');
+    if ('result' in v) return v.result;
+    if (v instanceof Date) return v;
+    if ('text' in v) return v.text;
+  }
+  return v;
+}
+
+async function sheetToRows(arrayBuffer) {
+  const wb = new ExcelJS.Workbook();
+  await wb.xlsx.load(arrayBuffer);
+  const ws = wb.worksheets[0];
+  const ncol = ws.actualColumnCount || ws.columnCount;
+  const rows = [];
+  ws.eachRow({ includeEmpty: true }, row => {
+    const arr = [];
+    for (let c = 1; c <= ncol; c++) arr.push(cellValue(row.getCell(c)));
+    rows.push(arr);
+  });
+  return rows;
+}
+
+function numVal(v) {
+  if (v === null || v === undefined) return null;
+  if (typeof v === 'string' && v.trim() === '') return null;
+  return v;
+}
+
+function build(huRows, skRows) {
+  const grid = new Map();
+  const report = { hu_blank_idx: [], sk_blank_idx: [], negatives: [], sk_dupidx_in_hu: [], unknown_idx: [], notes: [] };
+
+  // ---------- HU ----------
+  const huHeader = huRows[0], huData = huRows.slice(1);
+  const nStore = huHeader.length - 3;
+  if (nStore !== HU_CODES.length) {
+    report.notes.push(`FIGYELEM: a HU export ${nStore} üzletoszlopot tartalmaz, a térkép ${HU_CODES.length}-t vár. Ellenőrizd az üzletkijelölést (Debrecen legyen az utolsó).`);
+  }
+  const siColHu = huHeader.length - 1;
+  for (const row of huData) {
+    if (row[0] === null || row[0] === undefined) continue;
+    let si = numVal(row[siColHu]);
+    if (typeof si !== 'number') { report.hu_blank_idx.push(row[0]); continue; }
+    si = Math.trunc(si);
+    if (!(String(si) in MASTER)) { report.unknown_idx.push(['HU', si, row[0]]); continue; }
+    for (let j = 0; j < HU_CODES.length; j++) {
+      const code = HU_CODES[j];
+      const v = numVal(row[1 + j]);
+      if (v === null) continue;
+      grid.set(si + '|' + code, v);
+      if (typeof v === 'number' && v < 0) report.negatives.push([si, code, v, MASTER[si].name]);
+    }
+    if (SK_REMAP_TARGETS.has(si)) report.sk_dupidx_in_hu.push([si, row[0]]);
+  }
+
+  // ---------- SK ----------
+  const skHeader = skRows[0], skData = skRows.slice(1);
+  const siColSk = skHeader.length - 1;
+  const skColCode = {};
+  for (let i = 0; i < skHeader.length; i++) {
+    if (Object.prototype.hasOwnProperty.call(SK_STORES, skHeader[i])) skColCode[i] = SK_STORES[skHeader[i]];
+  }
+  if (Object.keys(skColCode).length === 0) {
+    report.notes.push('FIGYELEM: az SK üzletoszlopok nem azonosíthatók a fejlécből.');
+  }
+  for (const row of skData) {
+    if (row[0] === null || row[0] === undefined) continue;
+    let si = numVal(row[siColSk]);
+    if (typeof si !== 'number') { report.sk_blank_idx.push(row[0]); continue; }
+    si = Math.trunc(si);
+    if (!(String(si) in MASTER)) { report.unknown_idx.push(['SK', si, row[0]]); continue; }
+    const target = Object.prototype.hasOwnProperty.call(SK_REMAP, si) ? SK_REMAP[si] : si;
+    for (const cidx in skColCode) {
+      const code = skColCode[cidx];
+      const v = numVal(row[cidx]);
+      if (v === null) continue;
+      grid.set(target + '|' + code, v);
+      if (typeof v === 'number' && v < 0) report.negatives.push([target, code, v, MASTER[target].name]);
+    }
+  }
+
+  return { grid, report };
+}
+
+async function writeWorkbook(grid, report) {
+  const wb = new ExcelJS.Workbook();
+  const ws = wb.addWorksheet('Készlet feltöltés');
+  const modFill = { A: 'FFDCE6F1', B: 'FFEBF1DE', C: 'FFFDE9D9', D: 'FFE4DFEC', E: 'FFF2DCDB' };
+  const fontHdr = { name: 'Arial', bold: true, size: 10 };
+  const fontBase = { name: 'Arial', size: 10 };
+
+  ws.getCell('A1').value = 'Termékek'; ws.getCell('A1').font = fontHdr;
+  ws.getCell('B1').value = 'Negatív értékek ennyi oszlopban'; ws.getCell('B1').font = fontHdr;
+  ws.getCell('B1').alignment = { wrapText: true, horizontal: 'center' };
+
+  for (const [col, code, dname] of LAYOUT) {
+    const c1 = ws.getCell(col + '1'); c1.value = code; c1.font = fontHdr;
+    c1.alignment = { horizontal: 'center' };
+    if (modFill[code[0]]) c1.fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: modFill[code[0]] } };
+    const c2 = ws.getCell(col + '2'); c2.value = dname; c2.font = fontBase;
+    c2.alignment = { horizontal: 'center' };
+  }
+  ws.getCell('B3').value = { formula: 'SUM(B4:B600)' }; ws.getCell('B3').font = fontHdr;
+
+  const lastCol = LAYOUT[LAYOUT.length - 1][0];
+  for (let idx = 1; idx <= 597; idx++) {
+    const r = idx + 3;
+    const m = MASTER[idx];
+    ws.getCell('A' + r).value = (m && m.name) || `(idx ${idx})`; ws.getCell('A' + r).font = fontBase;
+    ws.getCell('B' + r).value = { formula: `COUNTIF(C${r}:${lastCol}${r},"<0")` }; ws.getCell('B' + r).font = fontBase;
+    for (const [col, code] of LAYOUT) {
+      const v = grid.get(idx + '|' + code);
+      if (v !== undefined) { const c = ws.getCell(col + r); c.value = v; c.font = fontBase; }
+    }
+  }
+
+  ws.views = [{ state: 'frozen', xSplit: 2, ySplit: 3 }];
+  ws.getColumn(1).width = 34;
+  ws.getColumn(2).width = 12;
+
+  const lg = wb.addWorksheet('Napló');
+  lg.getColumn(1).width = 95;
+  let r = 1;
+  const logLines = [];
+  function put(txt, bold, size) {
+    const cell = lg.getCell('A' + r);
+    cell.value = txt;
+    cell.font = { name: 'Arial', bold: !!bold, size: size || 10 };
+    r += 1;
+    logLines.push(txt);
+  }
+  put('ELLENŐRZÉSI NAPLÓ – automatikus készlet feltöltés', true, 12);
+  const now = new Date();
+  const pad = n => String(n).padStart(2, '0');
+  put(`Generálva: ${now.getFullYear()}-${pad(now.getMonth()+1)}-${pad(now.getDate())} ${pad(now.getHours())}:${pad(now.getMinutes())}`);
+  r += 1;
+  if (report.unknown_idx.length) {
+    put('!!! ISMERETLEN INDEX (nincs a V31 masterben – config frissítés kellhet):', true);
+    for (const [src, idx, nm] of report.unknown_idx) put(`   [${src}] idx ${idx} | ${nm}`);
+    r += 1;
+  }
+  put(`Index nélküli HU sorok (kimaradtak) – ${report.hu_blank_idx.length} db:`, true);
+  for (const x of report.hu_blank_idx) put(`   ${x}`);
+  r += 1;
+  put(`Index nélküli SK sorok (kimaradtak) – ${report.sk_blank_idx.length} db:`, true);
+  for (const x of report.sk_blank_idx) put(`   ${x}`);
+  r += 1;
+  put(`Negatív értékek (hó végén javítandó) – ${report.negatives.length} db:`, true);
+  for (const [idx, code, v, nm] of report.negatives) put(`   idx ${idx} | ${code} | ${v} | ${nm}`);
+  if (report.sk_dupidx_in_hu.length) {
+    r += 1;
+    put('FIGYELEM: HU adat (sk)-duplikátum indexen:', true);
+    for (const [idx, nm] of report.sk_dupidx_in_hu) put(`   idx ${idx} | ${nm}`);
+  }
+  if (report.notes.length) {
+    r += 1;
+    put('Egyéb megjegyzések:', true);
+    for (const n of report.notes) put(`   ${n}`);
+  }
+
+  return { workbook: wb, logText: logLines.join('\n') };
+}
+
+function pad2(n) { return String(n).padStart(2, '0'); }
+
+document.getElementById('genBtn').addEventListener('click', async () => {
+  const btn = document.getElementById('genBtn');
+  const genBanner = document.getElementById('genBanner');
+  genBanner.className = 'banner'; genBanner.textContent = '';
+  document.getElementById('resultCard').style.display = 'none';
+  btn.disabled = true; btn.textContent = 'Feldolgozás…';
+  try {
+    const [huBuf, skBuf] = await Promise.all([huFile.arrayBuffer(), skFile.arrayBuffer()]);
+    const [huRows, skRows] = await Promise.all([sheetToRows(huBuf), sheetToRows(skBuf)]);
+    const { grid, report } = build(huRows, skRows);
+    const { workbook, logText } = await writeWorkbook(grid, report);
+    const buffer = await workbook.xlsx.writeBuffer();
+    const blob = new Blob([buffer], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
+    const today = new Date();
+    const fname = `keszlet_feltoltes_${today.getFullYear()}-${pad2(today.getMonth()+1)}-${pad2(today.getDate())}.xlsx`;
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url; a.download = fname; document.body.appendChild(a); a.click();
+    a.remove(); setTimeout(() => URL.revokeObjectURL(url), 4000);
+
+    const metrics = document.getElementById('metrics');
+    metrics.innerHTML = '';
+    const tiles = [
+      { n: grid.size, l: 'kitöltött cella' },
+      { n: report.hu_blank_idx.length, l: 'HU index nélküli sor', cls: report.hu_blank_idx.length ? 'warn' : '' },
+      { n: report.sk_blank_idx.length, l: 'SK index nélküli sor', cls: report.sk_blank_idx.length ? 'warn' : '' },
+      { n: report.negatives.length, l: 'negatív cella', cls: report.negatives.length ? 'warn' : '' },
+      { n: report.unknown_idx.length, l: 'ismeretlen index', cls: report.unknown_idx.length ? 'bad' : '' },
+    ];
+    for (const t of tiles) {
+      const div = document.createElement('div');
+      div.className = 'metric' + (t.cls ? ' ' + t.cls : '');
+      div.innerHTML = `<div class="n">${t.n}</div><div class="l">${t.l}</div>`;
+      metrics.appendChild(div);
+    }
+    document.getElementById('logView').textContent = logText;
+    document.getElementById('resultCard').style.display = 'block';
+
+    if (report.unknown_idx.length || report.notes.length) {
+      genBanner.classList.add('show', 'warn');
+      genBanner.textContent = 'Kész, de nézd meg a Naplót – van benne figyelmeztetés.';
+    } else {
+      genBanner.classList.add('show', 'ok');
+      genBanner.textContent = `Kész – letöltve: ${fname}`;
+    }
+  } catch (err) {
+    genBanner.classList.add('show', 'err');
+    genBanner.textContent = 'Hiba történt: ' + err.message;
+    console.error(err);
+  } finally {
+    btn.disabled = false; btn.textContent = 'Készlet feltöltés generálása';
+  }
+});
+</script>
+</body>
+</html>
