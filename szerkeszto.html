@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Termékek szerkesztése</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap');
+
+  :root {
+    --bg: #f5f4f0; --surface: #ffffff; --surface2: #eeede8;
+    --border: rgba(0,0,0,0.08); --border2: rgba(0,0,0,0.14);
+    --text: #1a1916; --text2: #6b6a65; --text3: #9e9d98;
+    --red: #c0392b; --red-bg: #fdf0ee;
+    --green: #2d6a4f; --green-bg: #edf7f2;
+    --amber: #92400e; --amber-bg: #fef3c7;
+    --radius: 10px; --radius-lg: 14px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #171613; --surface: #211f1c; --surface2: #2a2824;
+      --border: rgba(255,255,255,0.08); --border2: rgba(255,255,255,0.16);
+      --text: #f0efe9; --text2: #a8a69f; --text3: #75736c;
+      --red: #e57368; --red-bg: #3a211d;
+      --green: #6fbf9a; --green-bg: #1c2e26;
+      --amber: #e0a94a; --amber-bg: #3a2c10;
+    }
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); font-size: 14px; line-height: 1.5; }
+
+  .header { background: var(--text); color: var(--bg); padding: 18px 28px; display: flex; align-items: baseline; gap: 14px; justify-content: space-between; position: sticky; top: 0; z-index: 100; }
+  .header h1 { font-size: 16px; font-weight: 600; }
+  .header a { color: inherit; opacity: 0.7; font-size: 12.5px; text-decoration: none; }
+  .header a:hover { opacity: 1; text-decoration: underline; }
+
+  .main { max-width: 900px; margin: 0 auto; padding: 24px 20px 80px; }
+
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 20px; margin-bottom: 16px; }
+  .step { font-size: 11px; text-transform: uppercase; letter-spacing: 0.4px; color: var(--text3); font-weight: 600; margin-bottom: 10px; }
+
+  label.field { display: block; font-size: 12.5px; color: var(--text2); margin-bottom: 6px; }
+  input[type=password], input[type=text] {
+    width: 100%; padding: 9px 12px; border: 1px solid var(--border2); border-radius: var(--radius);
+    background: var(--surface2); color: var(--text); font-family: 'DM Mono', monospace; font-size: 13px; outline: none;
+  }
+  input:focus { border-color: var(--text); }
+  .row-inline { display: flex; gap: 10px; align-items: end; flex-wrap: wrap; }
+  .row-inline > div { flex: 1; min-width: 200px; }
+  .chk { display: flex; align-items: center; gap: 5px; font-size: 12px; color: var(--text2); }
+
+  .btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 18px; font-size: 13px; font-weight: 600; border: none; border-radius: var(--radius); background: var(--text); color: var(--bg); cursor: pointer; }
+  .btn:disabled { opacity: 0.35; cursor: not-allowed; }
+  .btn:not(:disabled):hover { opacity: 0.85; }
+  .btn.secondary { background: var(--surface2); color: var(--text); border: 1px solid var(--border2); }
+  .btn.danger { background: var(--red); color: #fff; }
+
+  .banner { border-radius: var(--radius); padding: 12px 14px; font-size: 12.5px; margin-top: 12px; display: none; }
+  .banner.show { display: block; }
+  .banner.err { background: var(--red-bg); color: var(--red); }
+  .banner.warn { background: var(--amber-bg); color: var(--amber); }
+  .banner.ok { background: var(--green-bg); color: var(--green); }
+
+  table { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+  th { text-align: left; font-size: 11px; text-transform: uppercase; color: var(--text3); padding: 6px 8px; border-bottom: 1px solid var(--border2); position: sticky; top: 54px; background: var(--surface); }
+  td { padding: 5px 8px; border-bottom: 1px solid var(--border); vertical-align: middle; }
+  td input[type=text] { padding: 5px 8px; font-family: 'DM Sans', sans-serif; font-size: 12.5px; }
+  td.idx { font-family: 'DM Mono', monospace; color: var(--text3); width: 50px; }
+  tr.new-row td { background: var(--green-bg); }
+  tr.removed-row td { background: var(--red-bg); text-decoration: line-through; opacity: 0.6; }
+  tr.changed-row td.name-cell { background: var(--amber-bg); }
+  .occ-cell { white-space: nowrap; }
+  .del-btn { background: none; border: none; color: var(--text3); cursor: pointer; font-size: 14px; }
+  .del-btn:hover { color: var(--red); }
+
+  .table-wrap { max-height: 60vh; overflow-y: auto; margin-top: 10px; border: 1px solid var(--border); border-radius: var(--radius); }
+  .table-wrap table { margin: 0; }
+
+  .toolbar { display: flex; gap: 8px; align-items: center; margin-bottom: 10px; flex-wrap: wrap; }
+  .toolbar input[type=text] { max-width: 260px; }
+  .count { font-size: 12px; color: var(--text2); margin-left: auto; }
+
+  .modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.5); display: none; align-items: center; justify-content: center; z-index: 200; padding: 20px; }
+  .modal-overlay.show { display: flex; }
+  .modal { background: var(--surface); border-radius: var(--radius-lg); padding: 22px; max-width: 560px; width: 100%; max-height: 80vh; overflow-y: auto; }
+  .modal h3 { font-size: 14px; margin-bottom: 12px; }
+  .modal .diff-line { font-family: 'DM Mono', monospace; font-size: 12px; margin-bottom: 4px; }
+  .modal .actions { display: flex; gap: 8px; margin-top: 16px; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Termékek szerkesztése</h1>
+  <a href="index.html">&larr; generátor</a>
+</div>
+
+<div class="main">
+  <div class="card">
+    <div class="step">1. GitHub hozzáférés</div>
+    <p style="color:var(--text2); font-size:12.5px; margin-bottom:12px;">
+      Egy <b>repo</b> jogosultságú GitHub Personal Access Token kell (Settings →
+      Developer settings → Personal access tokens), mert a mentés közvetlenül
+      commitol ebbe a repóba (<code>pizzame-keszlet</code>). A token csak a
+      böngésződben, helyben tárolódik (localStorage), és csak az
+      api.github.com felé megy ki.
+    </p>
+    <div class="row-inline">
+      <div>
+        <label class="field" for="token">GitHub token</label>
+        <input type="password" id="token" placeholder="ghp_...">
+      </div>
+      <button class="btn secondary" id="rememberBtn">Token megjegyzése</button>
+      <button class="btn" id="loadBtn">Betöltés</button>
+    </div>
+    <div id="loadBanner" class="banner"></div>
+  </div>
+
+  <div class="card" id="editorCard" style="display:none">
+    <div class="step">2. Termékek (config.json → master)</div>
+    <div class="toolbar">
+      <input type="text" id="search" placeholder="Keresés név vagy index szerint...">
+      <button class="btn secondary" id="addBtn">+ Új termék</button>
+      <span class="count" id="rowCount"></span>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th class="idx">Index</th><th>Név</th><th>V31</th><th>Készlet HU</th><th>Készlet SK</th><th></th></tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+    <div style="margin-top:14px;">
+      <button class="btn" id="saveBtn" disabled>Mentés GitHub-ra</button>
+    </div>
+    <div id="saveBanner" class="banner"></div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="confirmModal">
+  <div class="modal">
+    <h3>Ezt fogom commitolni:</h3>
+    <div id="diffList"></div>
+    <div class="actions">
+      <button class="btn secondary" id="cancelSave">Mégse</button>
+      <button class="btn" id="confirmSave">Mentés megerősítése</button>
+    </div>
+  </div>
+</div>
+
+<script>
+const OWNER = 'ottobansagi-crypto';
+const REPO = 'pizzame-keszlet';
+const CONFIG_PATH = 'config.json';
+const TOKEN_KEY = 'keszlet_editor_gh_token';
+
+const tokenInput = document.getElementById('token');
+const rememberBtn = document.getElementById('rememberBtn');
+const loadBtn = document.getElementById('loadBtn');
+const loadBanner = document.getElementById('loadBanner');
+const editorCard = document.getElementById('editorCard');
+const tbody = document.getElementById('tbody');
+const saveBtn = document.getElementById('saveBtn');
+const saveBanner = document.getElementById('saveBanner');
+
+const savedToken = localStorage.getItem(TOKEN_KEY);
+if (savedToken) tokenInput.value = savedToken;
+
+rememberBtn.addEventListener('click', () => {
+  if (tokenInput.value) {
+    localStorage.setItem(TOKEN_KEY, tokenInput.value);
+    rememberBtn.textContent = 'Elmentve ✓';
+    setTimeout(() => rememberBtn.textContent = 'Token megjegyzése', 1500);
+  }
+});
+
+function ghHeaders(token) {
+  return { Authorization: 'token ' + token, Accept: 'application/vnd.github+json' };
+}
+
+async function ghGetFile(owner, repo, path, token) {
+  const r = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${path}`, { headers: ghHeaders(token) });
+  if (!r.ok) throw new Error(`${repo}: HTTP ${r.status} (${r.status === 404 ? 'fájl nem található' : r.status === 401 ? 'érvénytelen token' : r.status === 403 ? 'nincs jogosultság' : 'hiba'})`);
+  const data = await r.json();
+  const content = decodeURIComponent(escape(atob(data.content.replace(/\n/g, ''))));
+  return { json: JSON.parse(content), sha: data.sha };
+}
+
+async function ghPutFile(owner, repo, path, token, jsonObj, sha, message) {
+  const content = JSON.stringify(jsonObj, null, 1);
+  const b64 = btoa(unescape(encodeURIComponent(content)));
+  const r = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${path}`, {
+    method: 'PUT',
+    headers: { ...ghHeaders(token), 'Content-Type': 'application/json' },
+    body: JSON.stringify({ message, content: b64, sha }),
+  });
+  if (!r.ok) {
+    const body = await r.text();
+    throw new Error(`${repo}: HTTP ${r.status} – ${body.slice(0, 200)}`);
+  }
+  return r.json();
+}
+
+let originalMaster = null;   // { idx: {name, occ} } as loaded
+let configSha = null, fullConfig = null;
+let rows = [];                // working copy: [{idx, name, occ:{v31,hu,sk}, isNew, removed}]
+let nextTempIdx = null;
+
+function occToFlags(occ) {
+  return { v31: /(^|\s)V31(\s|$)/.test(occ || ''), hu: /Készlet HU/.test(occ || ''), sk: /Készlet SK/.test(occ || '') };
+}
+function flagsToOcc(f) {
+  const parts = [];
+  if (f.v31) parts.push('V31');
+  if (f.hu) parts.push('Készlet HU');
+  if (f.sk) parts.push('Készlet SK');
+  return parts.join(' / ');
+}
+
+loadBtn.addEventListener('click', async () => {
+  const token = tokenInput.value.trim();
+  loadBanner.className = 'banner'; loadBanner.textContent = '';
+  if (!token) { loadBanner.classList.add('show', 'err'); loadBanner.textContent = 'Add meg a tokent.'; return; }
+  loadBtn.disabled = true; loadBtn.textContent = 'Betöltés…';
+  try {
+    const cfg = await ghGetFile(OWNER, REPO, CONFIG_PATH, token);
+
+    fullConfig = cfg.json;
+    configSha = cfg.sha;
+    originalMaster = fullConfig.master;
+
+    rows = Object.entries(originalMaster)
+      .map(([idx, v]) => ({ idx: Number(idx), name: v.name, occ: occToFlags(v.occ), isNew: false, removed: false }))
+      .sort((a, b) => a.idx - b.idx);
+    nextTempIdx = Math.max(...rows.map(r => r.idx)) + 1;
+
+    renderRows();
+    editorCard.style.display = 'block';
+    loadBanner.classList.add('show', 'ok');
+    loadBanner.textContent = `Betöltve: ${rows.length} termék (repo sha ${cfg.sha.slice(0,7)}).`;
+  } catch (err) {
+    loadBanner.classList.add('show', 'err');
+    loadBanner.textContent = 'Hiba: ' + err.message;
+  } finally {
+    loadBtn.disabled = false; loadBtn.textContent = 'Betöltés';
+  }
+});
+
+function renderRows() {
+  const q = document.getElementById('search').value.trim().toLowerCase();
+  tbody.innerHTML = '';
+  let shown = 0;
+  for (const row of rows) {
+    if (q && !(String(row.idx).includes(q) || row.name.toLowerCase().includes(q))) continue;
+    shown++;
+    const tr = document.createElement('tr');
+    if (row.removed) tr.className = 'removed-row';
+    else if (row.isNew) tr.className = 'new-row';
+    tr.dataset.idx = row.idx;
+
+    const tdIdx = document.createElement('td'); tdIdx.className = 'idx'; tdIdx.textContent = row.idx; tr.appendChild(tdIdx);
+
+    const tdName = document.createElement('td'); tdName.className = 'name-cell';
+    const nameInput = document.createElement('input'); nameInput.type = 'text'; nameInput.value = row.name; nameInput.disabled = row.removed;
+    nameInput.addEventListener('input', () => { row.name = nameInput.value; updateSaveState(); });
+    tdName.appendChild(nameInput); tr.appendChild(tdName);
+
+    for (const key of ['v31', 'hu', 'sk']) {
+      const td = document.createElement('td'); td.className = 'occ-cell';
+      const cb = document.createElement('input'); cb.type = 'checkbox'; cb.checked = row.occ[key]; cb.disabled = row.removed;
+      cb.addEventListener('change', () => { row.occ[key] = cb.checked; updateSaveState(); });
+      td.appendChild(cb); tr.appendChild(td);
+    }
+
+    const tdDel = document.createElement('td');
+    const delBtn = document.createElement('button'); delBtn.className = 'del-btn'; delBtn.textContent = row.removed ? '↺' : '✕';
+    delBtn.title = row.removed ? 'Visszaállítás' : 'Törlés';
+    delBtn.addEventListener('click', () => { row.removed = !row.removed; renderRows(); updateSaveState(); });
+    tdDel.appendChild(delBtn); tr.appendChild(tdDel);
+
+    tbody.appendChild(tr);
+  }
+  document.getElementById('rowCount').textContent = `${shown} / ${rows.length} termék`;
+}
+document.getElementById('search').addEventListener('input', renderRows);
+
+document.getElementById('addBtn').addEventListener('click', () => {
+  rows.push({ idx: nextTempIdx, name: '', occ: { v31: true, hu: false, sk: false }, isNew: true, removed: false });
+  nextTempIdx++;
+  document.getElementById('search').value = '';
+  renderRows();
+  updateSaveState();
+  tbody.lastElementChild && tbody.lastElementChild.scrollIntoView({ block: 'center' });
+});
+
+function computeDiff() {
+  const added = rows.filter(r => r.isNew && !r.removed);
+  const removed = rows.filter(r => r.removed && !r.isNew);
+  const changed = rows.filter(r => {
+    if (r.isNew || r.removed) return false;
+    const orig = originalMaster[r.idx];
+    return orig.name !== r.name || orig.occ !== flagsToOcc(r.occ);
+  });
+  return { added, removed, changed };
+}
+
+function updateSaveState() {
+  const { added, removed, changed } = computeDiff();
+  saveBtn.disabled = added.length === 0 && removed.length === 0 && changed.length === 0;
+}
+
+saveBtn.addEventListener('click', () => {
+  const { added, removed, changed } = computeDiff();
+  const diffList = document.getElementById('diffList');
+  diffList.innerHTML = '';
+  const section = (title, items, fmt) => {
+    if (!items.length) return;
+    const h = document.createElement('div'); h.style.fontWeight = '600'; h.style.marginTop = '10px'; h.textContent = title;
+    diffList.appendChild(h);
+    for (const it of items) {
+      const d = document.createElement('div'); d.className = 'diff-line'; d.textContent = fmt(it);
+      diffList.appendChild(d);
+    }
+  };
+  section(`Új termék (${added.length}):`, added, r => `  +${r.idx} ${r.name} [${flagsToOcc(r.occ)}]`);
+  section(`Törölve (${removed.length}):`, removed, r => `  -${r.idx} ${r.name}`);
+  section(`Módosítva (${changed.length}):`, changed, r => `  ~${r.idx} ${originalMaster[r.idx].name} → ${r.name} [${flagsToOcc(r.occ)}]`);
+  document.getElementById('confirmModal').classList.add('show');
+});
+
+document.getElementById('cancelSave').addEventListener('click', () => {
+  document.getElementById('confirmModal').classList.remove('show');
+});
+
+document.getElementById('confirmSave').addEventListener('click', async () => {
+  const token = tokenInput.value.trim();
+  document.getElementById('confirmModal').classList.remove('show');
+  saveBanner.className = 'banner'; saveBanner.textContent = '';
+  saveBtn.disabled = true; saveBtn.textContent = 'Mentés…';
+  try {
+    const newMaster = {};
+    for (const row of rows) {
+      if (row.removed) continue;
+      if (!row.name.trim()) throw new Error(`Az #${row.idx} terméknek nincs neve.`);
+      newMaster[row.idx] = { name: row.name.trim(), occ: flagsToOcc(row.occ) };
+    }
+    const { added, removed, changed } = computeDiff();
+    const msgParts = [];
+    if (added.length) msgParts.push(`+${added.length} új`);
+    if (removed.length) msgParts.push(`-${removed.length} törölt`);
+    if (changed.length) msgParts.push(`${changed.length} módosított`);
+    const message = `Termék szerkesztő: ${msgParts.join(', ')} termék`;
+
+    const newConfig = { ...fullConfig, master: newMaster };
+
+    const result = await ghPutFile(OWNER, REPO, CONFIG_PATH, token, newConfig, configSha, message);
+    configSha = result.content.sha;
+    originalMaster = newMaster;
+    rows = Object.entries(newMaster)
+      .map(([idx, v]) => ({ idx: Number(idx), name: v.name, occ: occToFlags(v.occ), isNew: false, removed: false }))
+      .sort((a, b) => a.idx - b.idx);
+    renderRows();
+    updateSaveState();
+
+    saveBanner.classList.add('show', 'ok');
+    saveBanner.textContent = `Mentve (${msgParts.join(', ')}).`;
+  } catch (err) {
+    saveBanner.classList.add('show', 'err');
+    saveBanner.textContent = 'Hiba mentés közben: ' + err.message;
+  } finally {
+    saveBtn.disabled = false; saveBtn.textContent = 'Mentés GitHub-ra';
+  }
+});
+</script>
+</body>
+</html>

@@ -1,9 +1,13 @@
-# PizzaMe – Készlet feltöltés generátor
+# PizzaMe – Készlet feltöltés
 
-Nyers Wildom készlet-export (HU + SK) → V31-kompatibilis **Készlet feltöltés** Excel,
-automatikusan, GitHub Actionsszel.
+Nyers Wildom készlet-export (HU + SK) → V31-kompatibilis **Készlet feltöltés** Excel.
+Két úton is előállítható, ugyanabból az egy repóból: böngészős generátorral azonnal,
+vagy GitHub Actionsszel automatikusan.
 
-> ⚠️ **A repo legyen PRIVÁT.** A nyers készlet üzleti adat, publikus repóba ne kerüljön.
+> Ez a repó **publikus**, mert a böngészős generátor GitHub Pages-en fut, ami
+> ingyenes csomaggal csak publikus repóból szolgál ki oldalt. A `bemenet/`/`kimenet/`
+> mappákban lévő fájlok emiatt nyilvánosan olvashatók a repóban és a Pages linken
+> keresztül is – ugyanaz a helyzet, mint a `pm-kalkuator`/`uzlet-riport` repóknál.
 
 ## Mit csinál
 
@@ -15,7 +19,7 @@ lapon jelzi a kimaradt (index nélküli) sorokat és a negatívokat. A régi ké
 
 ## Gyors út: vizuális generátor (nincs GitHub feltöltés)
 
-**https://ottobansagi-crypto.github.io/pizzame-keszlet-generator/**
+**https://ottobansagi-crypto.github.io/pizzame-keszlet/**
 
 Nyisd meg ezt a linket, húzd be a HU és SK exportot, kattints **Készlet feltöltés
 generálása** – az eredmény azonnal letöltődik a böngészőből. A két nyers fájl
@@ -23,13 +27,24 @@ soha nem hagyja el a gépedet: a feldolgozás teljes egészében a böngészőbe
 (JavaScript), nem kerül fel sehova. Ez ugyanazt a transzformációt végzi, mint a
 lenti GitHub Actions folyamat, csak fájlfeltöltés és várakozás nélkül.
 
-A generátor egy külön, **publikus** repóban (`pizzame-keszlet-generator`) él,
-mert a GitHub Pages ingyenes csomaggal csak publikus repóból szolgál ki oldalt.
-Ott kizárólag az `index.html` és a `config.json` termék-névtábla van – valódi
-készletadat oda soha nem kerül, a feltöltött HU/SK fájlok tartalma a
-böngészőből ki sem lép. Ha itt, ebben a (privát) repóban változik a
-`config.json`, ugyanazt a fájlt a másik repóba is át kell másolni és
-commitolni, hogy a generátor naprakész maradjon.
+A generátor (`index.html`) és a termékszerkesztő (`szerkeszto.html`) ugyanabban a
+repóban van, mint a Python szkript és a `config.json` – nincs mit szinkronizálni,
+egy helyen kell csak módosítani.
+
+### Termékek szerkesztése böngészőből
+
+**https://ottobansagi-crypto.github.io/pizzame-keszlet/szerkeszto.html**
+
+Ha csak a termék-mastert kell bővíteni/módosítani (új termék, új index, névváltozás,
+egy termék V31/Készlet HU/Készlet SK jelölése), nem kell kézzel piszkálni a
+`config.json`-t: ez az oldal betölti a jelenlegi terméklistát, engedi
+szerkeszteni/hozzáadni/törölni sorokat, majd megerősítés után commitol ide a GitHub
+API-n keresztül. Ehhez egy `repo` jogosultságú GitHub Personal Access Token kell,
+amit az oldal csak a böngésződben tárol (localStorage).
+
+Bolt/üzlet-struktúra változás (új üzlet, SK-ital duplikátum pár, oszloprend) ennél
+az eszköznél nincs támogatva – az ilyen ritkább, strukturális változásokat egyeztesd
+a chatben, ahogy eddig.
 
 ## Használat (heti futtatás – alternatíva, ha a fenti linket nem használod)
 
@@ -80,9 +95,16 @@ python keszlet_transform.py                 # bemenet/ -> kimenet/
 python keszlet_transform.py HU.xlsx SK.xlsx OUT.xlsx   # explicit fájlok
 ```
 
+## GitHub Pages bekapcsolása (egyszeri lépés)
+
+Settings → Pages → Source: **Deploy from a branch**, Branch: `master` / `(root)`.
+Utána minden push automatikusan frissíti a fenti linkeket, nincs vele több teendő.
+
 ## Fájlok
 
 - `keszlet_transform.py` – a transzformáció (mappa- és kézi mód).
+- `index.html` – böngészős generátor (GitHub Pages).
+- `szerkeszto.html` – böngészős termékszerkesztő (GitHub Pages).
 - `config.json` – V31 master, üzlet-térképek, SK-ital párosítás.
 - `.github/workflows/keszlet.yml` – az Actions workflow.
 - `bemenet/`, `kimenet/` – be- és kimeneti mappák.
