@@ -100,17 +100,28 @@ python keszlet_transform.py HU.xlsx SK.xlsx OUT.xlsx   # explicit fájlok
 Settings → Pages → Source: **Deploy from a branch**, Branch: `master` / `(root)`.
 Utána minden push automatikusan frissíti a fenti linkeket, nincs vele több teendő.
 
-## Claude Code – Superpowers skillek
+## Claude Code skillek
 
-A repó `.claude/settings.json` fájlja bekapcsolja a [Superpowers](https://github.com/obra/superpowers)
-plugint (Anthropic hivatalos plugin-marketplace-éből), így minden Claude Code session
-– webes, desktop vagy CLI – ugyanazt a fejlesztési módszertant kapja meg ebben a
-repóban: TDD, szisztematikus hibakeresés, terv-írás és -végrehajtás, kódreview.
-Nincs vele teendő, a session indulásakor magától betöltődik.
+A `.claude/skills/` alatt két külső skill-könyvtár van bemásolva (vendorolva):
 
-Ha minden repóban kell (nem csak itt), egyszer felhasználói szinten is be kell
-kapcsolni: `claude plugin install superpowers@claude-plugins-official`, vagy a
-Claude desktop app plugin-böngészőjében.
+- [Superpowers](https://github.com/obra/superpowers) (MIT) – 14 skill: brainstorming,
+  TDD, szisztematikus hibakeresés, terv-írás és -végrehajtás, kódreview.
+- [agent-browser](https://github.com/vercel-labs/agent-browser) (Apache-2.0) –
+  böngésző-automatizálás. A CLI-t `npx agent-browser <command>` formában kell hívni.
+
+Ebben a repóban nincs vele teendő: a felhős és a helyi Claude Code session is a klónból
+olvassa a `.claude/skills/` tartalmát, telepítés nélkül. Frissítés:
+`.claude/update-skills.sh` (a vendorolt upstream commitok a `.claude/vendor/manifest.tsv`-ben).
+
+Hogy máshol is meglegyenek:
+
+- **Másik repóban:** másold át a `.claude/update-skills.sh`-t, és futtasd ott egyszer.
+- **A saját gépen, minden helyi projektben:** `CLAUDE_SKILLS_ROOT="$HOME" .claude/update-skills.sh`
+  – ez a `~/.claude/skills/` alá telepít.
+- **Minden felhős sessionben, repótól függetlenül:** a skilleket fel kell tölteni a
+  claude.ai fiókba (desktop app → *Customize*, vagy a claude.ai skill-beállításai);
+  a felhős sessionök a fiókhoz engedélyezett skilleket induláskor letöltik. A
+  `~/.claude/skills/` **nem** jön át a felhős sessionökbe.
 
 ## Fájlok
 
@@ -120,4 +131,4 @@ Claude desktop app plugin-böngészőjében.
 - `config.json` – V31 master, üzlet-térképek, SK-ital párosítás.
 - `.github/workflows/keszlet.yml` – az Actions workflow.
 - `bemenet/`, `kimenet/` – be- és kimeneti mappák.
-- `.claude/settings.json` – Claude Code beállítások (Superpowers plugin).
+- `.claude/skills/`, `.claude/update-skills.sh` – vendorolt Claude Code skillek.
