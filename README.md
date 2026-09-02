@@ -100,6 +100,18 @@ python keszlet_transform.py HU.xlsx SK.xlsx OUT.xlsx   # explicit fájlok
 Settings → Pages → Source: **Deploy from a branch**, Branch: `master` / `(root)`.
 Utána minden push automatikusan frissíti a fenti linkeket, nincs vele több teendő.
 
+## Claude Code – Superpowers skillek
+
+A repó `.claude/settings.json` fájlja bekapcsolja a [Superpowers](https://github.com/obra/superpowers)
+plugint (Anthropic hivatalos plugin-marketplace-éből), így minden Claude Code session
+– webes, desktop vagy CLI – ugyanazt a fejlesztési módszertant kapja meg ebben a
+repóban: TDD, szisztematikus hibakeresés, terv-írás és -végrehajtás, kódreview.
+Nincs vele teendő, a session indulásakor magától betöltődik.
+
+Ha minden repóban kell (nem csak itt), egyszer felhasználói szinten is be kell
+kapcsolni: `claude plugin install superpowers@claude-plugins-official`, vagy a
+Claude desktop app plugin-böngészőjében.
+
 ## Fájlok
 
 - `keszlet_transform.py` – a transzformáció (mappa- és kézi mód).
@@ -108,3 +120,4 @@ Utána minden push automatikusan frissíti a fenti linkeket, nincs vele több te
 - `config.json` – V31 master, üzlet-térképek, SK-ital párosítás.
 - `.github/workflows/keszlet.yml` – az Actions workflow.
 - `bemenet/`, `kimenet/` – be- és kimeneti mappák.
+- `.claude/settings.json` – Claude Code beállítások (Superpowers plugin).
