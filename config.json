@@ -701,7 +701,7 @@
    "occ": "V31 / Készlet HU"
   },
   "176": {
-   "name": "Red Bull Fuji Alma Gyömbér",
+   "name": "Red Bull Kókusz-áfonya",
    "occ": "V31 / Készlet HU"
   },
   "177": {
@@ -1005,7 +1005,7 @@
    "occ": "V31 / Készlet HU / Készlet SK"
   },
   "252": {
-   "name": "Mérőedény ",
+   "name": "Mérőedény",
    "occ": "V31 / Készlet HU / Készlet SK"
   },
   "253": {
@@ -1129,7 +1129,7 @@
    "occ": "V31"
   },
   "283": {
-   "name": "Két oldalú ragasztószalag ",
+   "name": "Két oldalú ragasztószalag",
    "occ": "V31 / Készlet SK"
   },
   "284": {
@@ -1145,7 +1145,7 @@
    "occ": "V31"
   },
   "287": {
-   "name": "Vízkőoldó ",
+   "name": "Vízkőoldó",
    "occ": "V31 / Készlet HU / Készlet SK"
   },
   "288": {
@@ -2698,15 +2698,15 @@
   ]
  ],
  "sk_remap": {
-  "162": 330,
-  "163": 331,
   "77": 332,
   "78": 333,
-  "415": 336,
-  "100": 337,
   "96": 334,
   "97": 335,
-  "173": 328
+  "100": 337,
+  "162": 330,
+  "163": 331,
+  "173": 328,
+  "415": 336
  },
  "sk_stores": {
   "Michalska (1)": "E03",
