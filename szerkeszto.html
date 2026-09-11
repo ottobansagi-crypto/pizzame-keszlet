@@ -348,7 +348,7 @@ document.getElementById('confirmSave').addEventListener('click', async () => {
     const newMaster = {};
     for (const row of rows) {
       if (row.removed) continue;
-      if (!row.name.trim()) throw new Error(`Az #${row.idx} terméknek nincs neve.`);
+      if (row.isNew && !row.name.trim()) throw new Error(`Az új #${row.idx} terméknek adj nevet, vagy töröld a sort.`);
       newMaster[row.idx] = { name: row.name.trim(), occ: flagsToOcc(row.occ) };
     }
     const { added, removed, changed } = computeDiff();
