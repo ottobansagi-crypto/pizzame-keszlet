@@ -1697,8 +1697,8 @@
    "occ": "V31"
   },
   "425": {
-   "name": "Gyros csirke",
-   "occ": "V31"
+   "name": "Sült Bacon",
+   "occ": "V31 / Készlet HU"
   },
   "426": {
    "name": "P Fokhagymás joghurt",
@@ -1778,7 +1778,7 @@
   },
   "445": {
    "name": "Durván Őrölt feketebors",
-   "occ": "V31"
+   "occ": "V31 / Készlet HU"
   },
   "446": {
    "name": "22cm Ria doboz",
@@ -2385,7 +2385,7 @@
    "occ": "V31"
   },
   "597": {
-   "name": "e",
+   "name": "",
    "occ": "V31"
   }
  },
