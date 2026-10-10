@@ -102,26 +102,11 @@ Utána minden push automatikusan frissíti a fenti linkeket, nincs vele több te
 
 ## Claude Code skillek
 
-A `.claude/skills/` alatt két külső skill-könyvtár van bemásolva (vendorolva):
+A Superpowers és az agent-browser skillek a claude.ai fiókból jönnek
+(`anthropic-skills:` előtaggal), nem ebből a repóból – ezért minden sessionben
+elérhetők, minden repóban. Itt nincs velük teendő, és nincs belőlük másolat.
 
-- [Superpowers](https://github.com/obra/superpowers) (MIT) – 14 skill: brainstorming,
-  TDD, szisztematikus hibakeresés, terv-írás és -végrehajtás, kódreview.
-- [agent-browser](https://github.com/vercel-labs/agent-browser) (Apache-2.0) –
-  böngésző-automatizálás. A CLI-t `npx agent-browser <command>` formában kell hívni.
-
-Ebben a repóban nincs vele teendő: a felhős és a helyi Claude Code session is a klónból
-olvassa a `.claude/skills/` tartalmát, telepítés nélkül. Frissítés:
-`.claude/update-skills.sh` (a vendorolt upstream commitok a `.claude/vendor/manifest.tsv`-ben).
-
-Hogy máshol is meglegyenek:
-
-- **Másik repóban:** másold át a `.claude/update-skills.sh`-t, és futtasd ott egyszer.
-- **A saját gépen, minden helyi projektben:** `CLAUDE_SKILLS_ROOT="$HOME" .claude/update-skills.sh`
-  – ez a `~/.claude/skills/` alá telepít.
-- **Minden felhős sessionben, repótól függetlenül:** a skilleket fel kell tölteni a
-  claude.ai fiókba (desktop app → *Customize*, vagy a claude.ai skill-beállításai);
-  a felhős sessionök a fiókhoz engedélyezett skilleket induláskor letöltik. A
-  `~/.claude/skills/` **nem** jön át a felhős sessionökbe.
+Kezelés: claude.ai skill-beállítások, vagy a desktop app *Customize* menüje.
 
 ## Fájlok
 
@@ -131,4 +116,3 @@ Hogy máshol is meglegyenek:
 - `config.json` – V31 master, üzlet-térképek, SK-ital párosítás.
 - `.github/workflows/keszlet.yml` – az Actions workflow.
 - `bemenet/`, `kimenet/` – be- és kimeneti mappák.
-- `.claude/skills/`, `.claude/update-skills.sh` – vendorolt Claude Code skillek.
